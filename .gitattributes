@@ -1,0 +1,2 @@
+Build[[:space:]]Plates/TPU/TPU_\#1_20%_6-walls.stl filter=lfs diff=lfs merge=lfs -text
+Build[[:space:]]Plates/TPU/TPU_\#2_20%_6-walls.stl filter=lfs diff=lfs merge=lfs -text

@@ -1,10 +1,12 @@
 # The-Spider-Crab-and-MAST-CAM
 A rover (rough "perserverance-replica") equipped with rocker bogie (with a differential bar) suspension, capable of object detection + avoidance (with the RPi AI camera/US-100 sensors), remote control, and autonomous travel (with an onboard GPS). Modeled around the STS-3215 servo.
 
+### Hack-Club Required Q&A
 So, let's see:
 1. What is this? This is designed to be a hyper-mobile rover that is capable of autonomous driving, pathfinding (because it is combined with a GPS), and providing camera footage. I hope that I will be able to modify it for usage out of one of two scenarios: 1. hopefully rescue missions on debris/unstable territory (since the rover is pretty lightweight, weighing in at just about 4.5 kgs, and is theoretically capable of some crazy feats as long as the net tractive force is stable), or 2. conducting BAER assessment (providing photos to researchers about theoretically dangerous territories subject to wildfires). If the rover lacks mobility in practice, I will probably move towards the latter concept, in which case I have plans of adding six "sample"-collecting add-ons to be attached to each wheel.
 2. Why did I build this? Well, I've always been interested in Aerospace, and I've always thought the Perserverance rover was magical. I'm part of a drone team, and since we just built a drone that was not much unlike Ingenuity, I wondered if I could "complete" the duo here on Earth entirely from my own vision. This rover is the result of that work. I've gone through four separate unique versions of this rover (and even more "microversions" where I had to redesign parts inside each version to keep up with out-of-stock products and so on), but the hope is that this final rover will be just as mobile as the rover on Mars, MUCH faster (hopefully going at a mile an hour), WAY less power efficient (but to be fair, I don't exactly have the greatest parts at my disposal), and a final cost JUST under $1000 (so it's affordable), and accessible (meaning it is COMPLETELY idiot-proof -- I should be a good test subject for this, since I have not dealt with PCB design in the LEAST --, and has NO soldering/pcbs involved).
 
+### Screenshots of the full assembly.
 Okay, before we get started, let's get a few hero renders out of the way.
 <img width="1160" height="734" alt="image" src="https://github.com/user-attachments/assets/6676c012-a744-4464-b192-14bec569b187" />
 <img width="1209" height="728" alt="image" src="https://github.com/user-attachments/assets/54e44a33-d582-49d8-9911-47fb82f72d3f" />
@@ -14,7 +16,8 @@ Okay, before we get started, let's get a few hero renders out of the way.
 <img width="811" height="653" alt="image" src="https://github.com/user-attachments/assets/907d392b-3f84-469b-9ffb-63fdbcba52d7" />
 Eventually, when I build this, I should be able to atach a few "normal" photos of how it'll look.
 
-Find the BOM in the BOM folder (in three different file versions, you can choose the one you prefer but they are all the same).
+### BOM.
+Find the BOM above in the attached files.
 Or, alternatively, here it is below:
 
 | Quantity | Item | Description | Manufacturer | Link | Total Cost |
@@ -54,25 +57,31 @@ Or, alternatively, here it is below:
 | 1 | TPU 95A Filament, 1g (0.8ish needed) | Filament for prints. |  | https://www.amazon.com/dp/B07VDP2S3P?ref_=ppx_hzod_title_dt_b_fed_asin_title_0_0 |  $ 25.97  |
 | Total: |  |  |  |  |  $ 1,121.90  |
 
-Instructions to print:
+### Instructions to print:
 
-All files are named BuildPlate_ASA#1-8, they are to be printed in ASA with an minimum infill of 60% with the exceptions of BuildPlate_ASA#5 which is the chassis and can be printed with an minimum infill of 40%; as well as BuildPlate_ASA#9 which is to be printed at a minimum infill of 80%. Note the both BuildPlate_ASA#1 and BuildPlate_ASA#2 are the exact same thing, I just found it easier to put in that way instead of telling people to print BuildPlate_ASA#1 twice. These should be printed with at least 4 wall perimeters.
+PLEASE PLEASE PLEASE make it easy on yourself and use the 3MF **NOT** the STEP files for actually uploading onto a slicer.
+Whenever you load the part, make sure that if you get the following screen, you click **yes**:
+<img width="667" height="191" alt="image" src="https://github.com/user-attachments/assets/e115a54a-08e0-41dc-8084-4b1005eced47" />
 
-BuildPlate_TPU#1-2 are the wheels and are meant to be printed with TPU at an infill of 30%, even though they may look similar THEY ARE NOT THE SAME. Do not copy the wheels and print them. These should be printed with at least 6 wall perimeters.
+If you look at the naming convention for each 3MF files, it is clearly explained what settings are recommended (IE, ASA_#9_20%_3d-cubic\_4walls should be printed in ASA at 20% infill in a cubic sparse infill pattern with 4 walls). Now, this does get more complicated with the TPU. The TPU 3MF files include simple cylinders positioned around holes. These cylinders are modifiers. ***While the rest of the print is to be at 15% gyroid infill with 2 walls, these modifiers should be changed to SIX walls.*** This is VERY crucial. Heat Set Inserts are very annoying with TPU (as I've heard), and for them to be properly fastened/secured, the TPU must be made rigid. To save your time and filament whilst making heat-sets viable, these modifiers are meant to circle each cylindrical hole, providing enough material for the heat-set inserts to properly bite into the thermoplastic. If everything goes right, you should expect around 545g worth of filament being used for TPU\_1. Keep supports on for all prints.
 
-Tolerances are in-built into the prints, so long as everything is printed in the right material (ASA or TPU), as outlined. Remember, any other materials would either be more expensive alternatives, or less viable ones (ie, TPU is the best filament here because it is relatively common, flexible, but has a high temperature deflection point relative to the use-case the rover is ideal for, and ASA is the best rigid common filament with another reasonable temperature deflection point). You can see the overall assembly at this link (https://cad.onshape.com/documents/4276ee27674d5cd4437829d8/w/b68ed14a30814a824c43fb7e/e/30365733099079a1b69868d1?renderMode=0&uiState=6a72813946e9d1e13417c0d0, navigate to "The Spyder-Crab", and then the assembly of the same name), and simply hide the relevant objects to see precisely where everything goes.
+Note that the provided settings are the basic settings. If you have other settings for supports, etc, you may use those (as those do not impact strength).
+
+IN TOTAL YOU MAY EXPECT: 817.79g TPU being used (this is with supports) over 51.64 hours of printing. 1099.53g ASA being used (this is also with supports) over 56.05 hours of printing, for a total of around 107.69 hours of printing.
+
+Tolerances are in-built into the prints, so long as everything is printed in the right material (ASA or TPU), as outlined. Remember, any other materials would either be more expensive alternatives, or less viable ones (ie, TPU is the best filament here because it is relatively common, flexible, but has a high temperature deflection point relative to the use-case the rover is ideal for, and ASA is the best rigid common filament with another reasonable temperature deflection point). You can see the overall assembly at this [link](https://cad.onshape.com/documents/4276ee27674d5cd4437829d8/w/b68ed14a30814a824c43fb7e/e/30365733099079a1b69868d1?renderMode=0&uiState=6a78f4664b6102bbb3720076). navigate to "The Spyder-Crab", and then the assembly of the same name), and simply hide the relevant objects to see precisely where everything goes.
 
 Since there's so many parts (600 by my estimation), I will NOT be going over how each of the parts fit, although I believe most of it is obvious: in general, holes of diameter 4mm have a heat-set insert, holes of diamter 3mm allow for M3 screws to be passed, and so on. There are other specific cut-outs for flanged ball bearings (and so on for other parts, such as the rod-end).
 
 Eventually, I will make a complete tutorial for how the rover will be built (step-by-step), with photos (or a video).
 
-Instructions to wire:
+### Instructions to wire:
 
 THE ROVER IS COMPLETELY SOLDERLESS. IT IS DESIGNED TO NOT REQUIRE A PCB, BUT RATHER EASILY SOURCED PARTS ONLINE. There is nothing but a bit of cutting wires/sliding them into screw terminals or WAGO lever nuts. The rough diagram can be seen in the following image, subject to change (as soon as I build it and test it myself).
 <img width="1165" height="922" alt="0" src="https://github.com/user-attachments/assets/3638eef6-f6de-4540-a2af-545747c95600" />
 
 As you can see here, this is the rough wiring layout. Connect the battery to crimped spade terminal wires (6-12 gauge), connect the other end to an ANL fuse (with ring lugs, again, crimped), to the power switch and then the buck converter (set at 12V). Route the wire from the buck converter to three separate lines via the WAGO (respectively), to the Pi, and to the servo power lines. The rest of the diagram can be read as follows. Remember, there must be power injection with the servos on top of the star topography, as there would be significant browning near stall. This can be done by taking each male-JST connector, and directing that to a female-female wire, and leading that to another male-JST connector (keeping the ground and signal wires the same, but exchanging the hot/positive lead for a voltage line out of another WAGO lever nut. Once I build this, I will add photos and a detailed guide of how this can be accomplished (after all, right now this is just all theoretical). Soon, everything should be up! Right now, it is as bare-bones as it gets, but I should have this sorted out in just a little bit of time.
 
-Instructions to code:
+### Instructions to code:
 
 To be updated in a bit. I'll have to figure this one out as we go, after it gets built.

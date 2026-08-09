@@ -1,0 +1,35 @@
+Quantity,Item,Description,Manufacturer,Link,Total Cost
+24,JST PH 2mm 3-Pin to Male,Allows for power-injection to the Feetech servos.,Adafruit,https://www.adafruit.com/product/3893, $ 144.95 
+3,US-100 Ultrasonic Sensor,Allows the rover to navigate terrain/avoid objects.,,https://www.adafruit.com/product/4019,
+1,"Raspberry Pi Camera Cable, 500mm",Allows the camera module to freely rotate across its axes of freedom.,,https://www.adafruit.com/product/5820,
+1,Raspberry Pi AI Camera,Allows the rover to have object detection/recognition capabilities.,,https://www.adafruit.com/product/6009,
+1,"Raspberry Pi 5, 8GB","The ""brains"" of the rover.",AAAWave,https://aaawave.com/products/raspberry-pi-5-development-broad?variant=51441087152449, $ 161.63 
+1,Waveshare Serial Bus Driver,Allows for the Pi to communicate with the serial bus servos.,eBay,https://www.ebay.com/itm/206185697206?mkevt=1&mkpid=0&emsid=e11412.m144671.l197929&mkcid=7&ch=osgood&euid=6d034ae6c7bd442a96e4e9cbff91307c&bu=45719063109&exe=0&ext=0&osub=-1%7E1&crd=20260803165232&segname=11412, $ 12.23 
+6,Feetech STS3215,Allows for the rover to move (both its wheels and the camera).,Aliexpress,https://www.aliexpress.us/item/3256808670629323.html?spm=a2g0o.order_list.order_list_main.41.4d5c18021PISjv&gatewayAdapt=glo2usa, $ 404.07 
+1,"Soldering Iron, HS02A","Necessary to attach the heat-set inserts, tool.",,https://www.aliexpress.us/item/3256809503553320.html?spm=a2g0o.order_list.order_list_main.47.4d5c18021PISjv&gatewayAdapt=glo2usa,
+1,Hot Air Gun,Necessary to secure the shrink tubing to properly insulate wires.,,https://www.aliexpress.us/item/3256810350606440.html?spm=a2g0o.order_list.order_list_main.53.4d5c18021PISjv&gatewayAdapt=glo2usa,
+1,Heat Shrink Tubing Kit,Necessary to electrically insulate certain wires.,,https://www.aliexpress.us/item/3256807959988149.html?spm=a2g0o.order_list.order_list_main.35.4d5c18021PISjv&gatewayAdapt=glo2usa,
+1,WAGO 221-415 Lever Nuts,Necessary to proper distribute power as desired.,,https://www.aliexpress.us/item/3256811952946871.html?spm=a2g0o.order_list.order_list_main.29.4d5c18021PISjv&gatewayAdapt=glo2usa,
+1,"Crimpling ""Plier""",Necessary to properly attach the solderless lugs/terminals.,,https://www.aliexpress.us/item/2251832197019276.html?spm=a2g0o.order_list.order_list_main.17.4d5c18021PISjv&gatewayAdapt=glo2usa,
+1,USB-C to Screw Terminals,Necessary to provide the RPi power through bare wires.,,https://www.aliexpress.us/item/3256812221028465.html?spm=a2g0o.order_list.order_list_main.11.4d5c18021PISjv&gatewayAdapt=glo2usa,
+2,"1M, 12AWG Wire",Facilitates an electrical connection across parts.,,https://www.aliexpress.us/item/3256808222999562.html?spm=a2g0o.order_list.order_list_main.5.4d5c18021PISjv&gatewayAdapt=glo2usa,
+1,"RPi 5, Active Cooler","Allows for smooth Pi operation, prevents overheating.",Amazon,https://www.amazon.com/dp/B0CW164TCW?ref_=ppx_hzod_title_dt_b_fed_asin_title_0_0, $ 162.99 
+1,"12V, 30A Daiertek Switch",A manual power switch for the rover.,,https://www.amazon.com/dp/B0FL6B75PM?ref_=ppx_hzod_title_dt_b_fed_asin_title_1_0,
+1,20A ANL Fuse (and Holder),Protects electronics downstream.,,https://www.amazon.com/dp/B01LXQWZ7L?ref_=ppx_hzod_title_dt_b_fed_asin_title_1_1,
+1,VK-162 GPS,Allows the Raspberry Pi to navigate via GPS.,,https://www.amazon.com/dp/B078Y52FGQ?ref_=ppx_hzod_title_dt_b_fed_asin_title_1_2,
+1,Rod Ends (Small),Allow for the rocker-bogie suspension to function.,,https://www.amazon.com/dp/B0828TMYLD?ref_=ppx_hzod_title_dt_b_fed_asin_title_2_0,
+1,"120PCS, M3x5.7 Heat Set Inserts",Allow for the printed parts to be fastened together.,,https://www.amazon.com/dp/B0D7M4WWBW?ref_=ppx_hzod_title_dt_b_fed_asin_title_2_1,
+1,"2300 PCS, M3 Screws Kit",Necessary hardware for the assembly to be possible.,,https://www.amazon.com/dp/B0FGX859K8?ref_=ppx_hzod_title_dt_b_fed_asin_title_2_2,
+1,Flanged Ball Bearing,Necessary hardware for the rocker-bogie to be possible.,,https://www.amazon.com/dp/B0G1B7H48R?ref_=ppx_hzod_title_dt_b_fed_asin_title_2_3,
+1,Breadboard Jumper Wires,Allow for power-injection to the daisy-chained servos.,,https://www.amazon.com/dp/B07GD2PGY4?ref_=ppx_hzod_title_dt_b_fed_asin_title_2_4,
+2,Adjustable DC Buck Converter,Allow for the 12V battery to transfer power downstream.,,https://www.amazon.com/dp/B099S2VQ2Q?ref_=ppx_hzod_title_dt_b_fed_asin_title_0_0, $ 129.46 
+1,PTFE/Plumber's Tape,"Facilitate the physical ""bushing"" inside the wheels.",,https://www.amazon.com/dp/B091913Z7F?ref_=ppx_hzod_title_dt_b_fed_asin_title_1_0,
+1,"12V, 15Ah LiFePO4",Powers the rover (hopefully for 2+ hours).,,https://www.amazon.com/dp/B0CSWMF35Q?ref_=ppx_hzod_title_dt_b_fed_asin_title_1_1,
+1,Spade Terminal Connectors,Allow for power to be transmitted from the battery downstream solderlessly.,,https://www.amazon.com/dp/B0B4H54KPS?ref_=ppx_hzod_title_dt_b_fed_asin_title_2_0,
+1,Digital Multimeter,Checking if the electronic components are viable.,,https://www.amazon.com/dp/B08CX9W7G3?ref_=ppx_hzod_title_dt_b_fed_asin_title_0_0, $ 38.43 
+1,Ring Lugs Set,Allow for wires to be crimped onto the ANL fuse.,,https://www.amazon.com/dp/B0F99P7SGT?ref_=ppx_hzod_title_dt_b_fed_asin_title_1_0,
+1,12V LiFePO4 Charger,Charges the battery.,,https://www.amazon.com/dp/B0G3ZNWC4J?ref_=ppx_hzod_title_dt_b_fed_asin_title_1_1,
+1,M4x10mm Screws,Necessary hardware for the assembly to be possible.,,https://www.amazon.com/dp/B0FH2T8PD1?ref_=ppx_hzod_title_dt_b_fed_asin_title_0_0, $ 4.30 
+1,"ASA Filament, 2kgs (1.2ish needed)",Filament for prints.,,https://www.amazon.com/dp/B0G2L8HKB8?ref_=ppx_hzod_title_dt_b_fed_asin_title_0_0, $ 37.87 
+1,"TPU 95A Filament, 1g (0.8ish needed)",Filament for prints.,,https://www.amazon.com/dp/B07VDP2S3P?ref_=ppx_hzod_title_dt_b_fed_asin_title_0_0, $ 25.97 
+Total:,,,,," $ 1,121.90 "

@@ -83,5 +83,34 @@ THE ROVER IS COMPLETELY SOLDERLESS. IT IS DESIGNED TO NOT REQUIRE A PCB, BUT RAT
 As you can see here, this is the rough wiring layout. Connect the battery to crimped spade terminal wires (6-12 gauge), connect the other end to an ANL fuse (with ring lugs, again, crimped), to the power switch and then the buck converter (set at 12V). Route the wire from the buck converter to three separate lines via the WAGO (respectively), to the Pi, and to the servo power lines. The rest of the diagram can be read as follows. Remember, there must be power injection with the servos on top of the star topography, as there would be significant browning near stall. This can be done by taking each male-JST connector, and directing that to a female-female wire, and leading that to another male-JST connector (keeping the ground and signal wires the same, but exchanging the hot/positive lead for a voltage line out of another WAGO lever nut. Once I build this, I will add photos and a detailed guide of how this can be accomplished (after all, right now this is just all theoretical). Soon, everything should be up! Right now, it is as bare-bones as it gets, but I should have this sorted out in just a little bit of time.
 
 ### Instructions to code:
+Setting up the Pi: Downloading the Imager.
+Take your SD card, and plug into your computer. Try using either a computer with an SD card slot (with the microSD card in its SD card "sleeve") or get a USB-SD card reader.
+1. Choose the Raspberry Pi 5 as the device.
+2. Choose the default software (the Raspberry Pi 8GB can tolerate the 64-bit Raspberry Pi OS).
+3. Give the device a hostname/username/password you will remember. Write this down (it'll save you later).
+4. If you get a dialog to connect to a network, provide your home wifi.
+5. Enable SSH. You can enable a public SSH key, but I find that the password authentication setup is easier.
+6. Flash your imager onto the appropriate storage device (the SD card you just plugged in).
+7. Remove your SD card and plug that into the Raspberry Pi 5.
+8. Connect the Raspberry Pi 5 to a monitor via a Micro-HDMI to an HDMI cable.
 
-To be updated in a bit. I'll have to figure this one out as we go, after it gets built.
+Setting up the Pi on Boot:
+1. Once you are logged in, you can begin by setting up the VK-162. This is probably the easiest part of the setup.
+    1. Plug in the VK-162 to a USB slot on the Raspberry Pi.
+    2. Check the VK-162 is there with the command __ls /dev/ttyACM*__ in the Raspberry Pi's CLI. The output            should be __dev/ttyACM0.__
+    3. Run __lsusb | grep -i "u-blox"__. The result should be __Bus 003 Device 002: ID 1546:01a7 U-Blox AG__
+       __[u-blox 7]__ or an equivalent.
+    4. Install gpsd:
+       __sudo apt update__, then __sudo apt install -y gpsd gpsd-clients python3-gps__
+    5. Configure gpsd:
+       __sudo nano /etc/default/gpsd__, you must add: __DEVICES="/dev/ttyACM0"__, __GPSD_OPTIONS="-n"__, __START_DAEMON="true"__, and __USBAUTO="true"__
+    6. Restart and test: __sudo systemctl restart gpsd__, then __cgps -s__.
+2. If you want to, you can change the fan settings.
+     1. Type __sudo nano /boot/firmware/config.txt__ into the CLI.
+     2. Scroll to the very bottom and add the lines below:
+        __dtparam=fan_temp0=40000__
+        __dtparam=fan_temp1=45000__
+        __dtparam=fan_temp2=50000__
+        __dtparam=fan_temp3=55000__
+        __dtparam=uart0=on__
+3. Setting up the Servo Driver Board (to be updated).

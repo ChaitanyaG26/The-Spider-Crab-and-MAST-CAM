@@ -113,4 +113,10 @@ Setting up the Pi on Boot:
         __dtparam=fan_temp2=50000__
         __dtparam=fan_temp3=55000__
         __dtparam=uart0=on__
-3. Setting up the Servo Driver Board (to be updated).
+3. Setting up the Raspberry Pi AI Camera:
+    1. The black side on the Pi is on the opposite side from the USB ports, whilst the black side on the Camera faces on the opposite side from the main camera module. Wire in this fashion. Tweezers are helpful.
+    2. Run __sudo apt update && sudo apt full-upgrade__.
+    3. Run __sudo reboot__.
+    4. Run __rpicam-hello -t 0s --post-process-file /usr/share/rpi-camera-assets/imx500_mobilenet_ssd.json --viewfinder-width 1920 --viewfinder-height 1080 --framerate 30__. This should return a live feed with post-processed object detection
+    5. Run __rpicam-hello -t 0s --post-process-file /usr/share/rpi-camera-assets/imx500_posenet.json --viewfinder-width 1920 --viewfinder-height 1080 --framerate 30__. This should return a live feed with post-processed pose detection.
+    6. If you wish to change the focal length (and thus the focus), take the plastic knob, point the hollow end towards the camera module, press, and turn. Test out various focal lengths (but be careful as to not damage the electronic) through the hole until you find an appropriate one.

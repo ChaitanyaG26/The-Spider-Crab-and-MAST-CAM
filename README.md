@@ -57,6 +57,14 @@ Or, alternatively, here it is below:
 | 1 | TPU 95A Filament, 1g (0.8ish needed) | Filament for prints. |  | https://www.amazon.com/dp/B07VDP2S3P?ref_=ppx_hzod_title_dt_b_fed_asin_title_0_0 |  $ 25.97  |
 | Total: |  |  |  |  |  $ 1,121.90  |
 
+Recommended additional common supplies (double-check you have these):
+1. An official raspberry pi 5 power supply (27W).
+2. A 12V power supply (preferably 2-3A or less) with a DC5521 power jack.
+3. USB to USB-C cable (or a USB to a USB-C female port, and then a USB-C to a USB-C).
+4. Tape/ruler/marker/etc (these are helpful in construction).
+
+[To be updated as the build proceeds].
+
 ### Instructions to print:
 
 PLEASE PLEASE PLEASE make it easy on yourself and use the 3MF **NOT** the STEP files for actually uploading onto a slicer.
@@ -97,26 +105,38 @@ Take your SD card, and plug into your computer. Try using either a computer with
 Setting up the Pi on Boot:
 1. Once you are logged in, you can begin by setting up the VK-162. This is probably the easiest part of the setup.
     1. Plug in the VK-162 to a USB slot on the Raspberry Pi.
-    2. Check the VK-162 is there with the command __ls /dev/ttyACM*__ in the Raspberry Pi's CLI. The output            should be __dev/ttyACM0.__
-    3. Run __lsusb | grep -i "u-blox"__. The result should be __Bus 003 Device 002: ID 1546:01a7 U-Blox AG__
-       __[u-blox 7]__ or an equivalent.
+    2. Check the VK-162 is there with the command `ls /dev/ttyACM*` in the Raspberry Pi's CLI. The output            should be `dev/ttyACM0`
+    3. Run `lsusb | grep -i "u-blox"` The result should be `Bus 003 Device 002: ID 1546:01a7 U-Blox AG`
+       `[u-blox 7]` or an equivalent.
     4. Install gpsd:
-       __sudo apt update__, then __sudo apt install -y gpsd gpsd-clients python3-gps__
+       `sudo apt update`, then `sudo apt install -y gpsd gpsd-clients python3-gps`
     5. Configure gpsd:
-       __sudo nano /etc/default/gpsd__, you must add: __DEVICES="/dev/ttyACM0"__, __GPSD_OPTIONS="-n"__, __START_DAEMON="true"__, and __USBAUTO="true"__
-    6. Restart and test: __sudo systemctl restart gpsd__, then __cgps -s__.
+       `sudo nano /etc/default/gpsd`, you must add: `DEVICES="/dev/ttyACM0"`, `GPSD_OPTIONS="-n"`, `START_DAEMON="true"`, and `USBAUTO="true"`
+    6. Restart and test: `sudo systemctl restart gpsd`, then `cgps -s`
 2. If you want to, you can change the fan settings.
-     1. Type __sudo nano /boot/firmware/config.txt__ into the CLI.
+     1. Type `sudo nano /boot/firmware/config.txt` into the CLI.
      2. Scroll to the very bottom and add the lines below:
-        __dtparam=fan_temp0=40000__
-        __dtparam=fan_temp1=45000__
-        __dtparam=fan_temp2=50000__
-        __dtparam=fan_temp3=55000__
-        __dtparam=uart0=on__
+        `dtparam=fan_temp0=40000`
+        `dtparam=fan_temp1=45000`
+        `dtparam=fan_temp2=50000`
+        `dtparam=fan_temp3=55000`
+        `dtparam=uart0=on`
 3. Setting up the Raspberry Pi AI Camera:
     1. The black side on the Pi is on the opposite side from the USB ports, whilst the black side on the Camera faces on the opposite side from the main camera module. Wire in this fashion. Tweezers are helpful.
-    2. Run __sudo apt update && sudo apt full-upgrade__.
-    3. Run __sudo reboot__.
-    4. Run __rpicam-hello -t 0s --post-process-file /usr/share/rpi-camera-assets/imx500_mobilenet_ssd.json --viewfinder-width 1920 --viewfinder-height 1080 --framerate 30__. This should return a live feed with post-processed object detection
-    5. Run __rpicam-hello -t 0s --post-process-file /usr/share/rpi-camera-assets/imx500_posenet.json --viewfinder-width 1920 --viewfinder-height 1080 --framerate 30__. This should return a live feed with post-processed pose detection.
+    2. Run `sudo apt update && sudo apt full-upgrade`
+    3. Run `sudo reboot`
+    4. Run `rpicam-hello -t 0s --post-process-file /usr/share/rpi-camera-assets/imx500_mobilenet_ssd.json --viewfinder-width 1920 --viewfinder-height 1080 --framerate 30` This should return a live feed with post-processed object detection
+    5. Run `rpicam-hello -t 0s --post-process-file /usr/share/rpi-camera-assets/imx500_posenet.json --viewfinder-width 1920 --viewfinder-height 1080 --framerate 30` This should return a live feed with post-processed pose detection.
     6. If you wish to change the focal length (and thus the focus), take the plastic knob, point the hollow end towards the camera module, press, and turn. Test out various focal lengths (but be careful as to not damage the electronic) through the hole until you find an appropriate one.
+4. Setting up the __FIRST__ STS3215 Servo:
+    1. Connect the servo horns to each servo. Usually, you can simply push into the toothed brass attachment until the horn is flush with the bottom and a click is heard. If the horn is refusing to be attached properly, use your thumb to push until you seat the horn a bit into the tooth (you can tell this is the case if you leave your hand and the horn doesn't move). Then, use your palm to connect it until a loud click is heard. The tolerances are so tight that the latter technique is often necessary (and in my experience the best one). Screw in everything (but leave a bit of leeway, so the horn is stable but the screw can still "wiggle" a bit).
+    2. Find a USB to a USB-C cable. If you do not have one, a traditional USB to a USB-C female socket is acceptable when connected with a USB-C to a USB-C cable (in fact, the latter architecture is the one I chose). Wait a few seconds, and then run dmesg | tail -1. Remember this, this is the port you will use in Step 8. Attach the USB-C port to the bus servo adapter, and the USB to the Pi. Wire a servo through one of the JST ports to the servo's JST port (just be careful for the orientation). Plug in your bus servo adapter with a DC5521 power jack (connected to a 12V power supply for setup).
+    3. Label the serial bus servo you have just plugged in with tape and a marker as 1. This is your servo ID (which must be unique for EACH of the 12 servos to allow for a functioning daisy-chain network). Label the rest of the 12 servos with similar numbering. You will label each servo with that ID during the following setup.
+    4. Run `sudo apt update && sudo apt install unrar -y` This downloads a program capable of unzipping rar files on Linux (which is the format provided by Waveshare's ST-series servos).
+    5. [Download the Waveshare ST-series Python control library.](https://files.waveshare.com/wiki/Bus_Servo_Driver_HAT_A/SCServo_Linux.rar) This will be the code that will help you setup the serial bus servos. Download onto a predetermined location, and then run `unrar x SCServo_Linux.rar` This will unzip the file, allowing for setup. Then, run `sudo apt install cmake -y` CMake will be the application that actually sets up your code and allows you to control the servos.
+    6. Then, open your SCServoLinux file in a new terminal (right click the SCServoLinux file -inside the SCServoLinux_220329, and then click "Open in Terminal"). Then, run `cmake .` Then, run `make SCServo` It should say "[100%] Built target SCServo"
+    7. Then, type in `cd examples/SMS_STS/WritePos` Run `nano WritePos.cpp` Change the 17th line to say "1000000" instead of "115200." This is the servo's baud rate, and it is 1000000 (the hardcoded value is wrong). Run Ctrl+O, click Enter, then run Ctrl+X. Now, you may run `cmake .` and then `make WritePos`
+    8. Go back to the port from Step 2. Run `sudo ./WritePos [port]`, where your final command should look like `sudo ./WritePos /dev/ttyACM2` When you want this to stop, you can run Ctrl+C. Your servo should spin.
+5. Setting up __SUBSEQUENT__ Servos.
+    1. Disconnect power from the serial bus servo adapter and the USB-C cable connecting the board to the Pi. Once power is off, disconnect the first serial bus servo and replace it for the one labeled "2" (or, if on a subsequent servo, choose the "next" servo in line) and wire that.
+    2. Text...

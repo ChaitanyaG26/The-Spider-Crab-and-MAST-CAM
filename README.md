@@ -137,6 +137,25 @@ Setting up the Pi on Boot:
     6. Then, open your SCServoLinux file in a new terminal (right click the SCServoLinux file -inside the SCServoLinux_220329, and then click "Open in Terminal"). Then, run `cmake .` Then, run `make SCServo` It should say "[100%] Built target SCServo"
     7. Then, type in `cd examples/SMS_STS/WritePos` Run `nano WritePos.cpp` Change the 17th line to say "1000000" instead of "115200." This is the servo's baud rate, and it is 1000000 (the hardcoded value is wrong). Run Ctrl+O, click Enter, then run Ctrl+X. Now, you may run `cmake .` and then `make WritePos`
     8. Go back to the port from Step 2. Run `sudo ./WritePos [port]`, where your final command should look like `sudo ./WritePos /dev/ttyACM2` When you want this to stop, you can run Ctrl+C. Your servo should spin.
-5. Setting up __SUBSEQUENT__ Servos.
-    1. Disconnect power from the serial bus servo adapter and the USB-C cable connecting the board to the Pi. Once power is off, disconnect the first serial bus servo and replace it for the one labeled "2" (or, if on a subsequent servo, choose the "next" servo in line) and wire that.
-    2. Text...
+5. Setting up __THE SECOND__ Servo.
+    1. Disconnect power from the serial bus servo adapter and the USB-C cable connecting the board to the Pi. Once power is off, disconnect the first serial bus servo and replace it for the one labeled "2" and wire that.
+    2. Run `mkdir ~/SCServo_Linux_220329/SCServo_Linux/examples/SMS_STS/ChangeID` Find the ChangeID.cpp file attached above and drop it into the newly created ChangeID folder.
+    3. Run:
+       ```
+       cp ~/SCServo_Linux_220329/SCServo_Linux/examples/SMS_STS/WritePos/CMakeLists.txt \
+       ~/SCServo_Linux_220329/SCServo_Linux/examples/SMS_STS/ChangeID/
+       cd ~/SCServo_Linux_220329/SCServo_Linux/examples/SMS_STS/ChangeID
+       sed -i 's/WritePos/ChangeID/g' CMakeLists.txt
+       ```
+       and then run, in the ChangeID folder:
+       ```
+       cmake .
+       make
+       sudo ./ChangeID /dev/[port]
+       ```
+       Where [port] is in the format "ttyACM0".
+    4. Run `nano WritePos.cpp` and check if "sm_st.WritePosEx" has the number 2 following it. This is the ID the Pi will ping. If it is not 2, change it to be 2 (ONLY IF YOU DID CHANGE THE NUMBER, run Ctrl+O, Enter, Ctrl+X. Then, open the WritePos file in a separate terminal and run `cmake .`, then `make`). Then, run `sudo ./WritePos /dev/[port]` Your second servo should know spin.
+6. Setting up __SUBSEQUENT__ Servos.
+    1. Disconnect power from the serial bus servo adapter and the USB-C cable connecting the board to the Pi. Once power is off, disconnect the first serial bus servo and replace it for the next labeled servo and wire that.
+    2. Run `nano ChangeID.cpp` in the ChangeID folder terminal and change the `#define NEW_ID 2` to have your new number replacing the 2 (or whatever other number is there). Ctrl+O, Enter, Ctrl+X, and in that same terminal, run `cmake .` `make` and finally `sudo ./ChangeID /dev/[port]`
+    3. Run `nano WritePos.cpp` in the WritePos folder terminal and change the `WritePosEx` command to have your new ID number. Ctrl+O, Enter, Ctrl+X, run `cmake .` `make` and finally `sudo ./WritePos /dev/[port]` so that your newest servo spins.

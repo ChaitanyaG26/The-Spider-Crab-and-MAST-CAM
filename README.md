@@ -1,12 +1,22 @@
-# The-Spider-Crab-and-MAST-CAM
-A rover (rough "perserverance-replica") equipped with rocker bogie (with a differential bar) suspension, capable of object detection + avoidance (with the RPi AI camera/US-100 sensors), remote control, and autonomous travel (with an onboard GPS). Modeled around the STS-3215 servo.
+# The Spider-Crab and MAST-CAM
+A rover (rough "perserverance-replica") equipped with rocker bogie (with a differential bar) suspension, capable of object detection + avoidance (with the RPi AI camera/US-100 sensors), remote control, and autonomous travel (with an onboard GPS). Modeled around the STS-3215 servo. (Special thanks here to Logan Wheatcroft for helping me spell "attach"). __THERE IS NO PCB ON THIS BUILD. IT IS SOLDERLESS.__
 
-### Hack-Club Required Q&A
+## Table of Contents
+- [The Spider-Crab and MAST-CAM](#the-spider-crab-and-mast-cam)
+- [Table of Contents](#table-of-contents)
+- [Hack-Club Required Q&A](#hack-club-required-qa)
+- [Full Assembly Screenshots](#full-assembly-screenshots)
+- [BOM](#bom)
+- [Printing Instructions](#printing-instructions)
+- [Wiring Instructions](#wiring-instructions)
+- [Setting Up The Pi](#setting-up-the-pi)
+
+## Hack-Club Required Q&A
 So, let's see:
 1. What is this? This is designed to be a hyper-mobile rover that is capable of autonomous driving, pathfinding (because it is combined with a GPS), and providing camera footage. I hope that I will be able to modify it for usage out of one of two scenarios: 1. hopefully rescue missions on debris/unstable territory (since the rover is pretty lightweight, weighing in at just about 4.5 kgs, and is theoretically capable of some crazy feats as long as the net tractive force is stable), or 2. conducting BAER assessment (providing photos to researchers about theoretically dangerous territories subject to wildfires). If the rover lacks mobility in practice, I will probably move towards the latter concept, in which case I have plans of adding six "sample"-collecting add-ons to be attached to each wheel.
 2. Why did I build this? Well, I've always been interested in Aerospace, and I've always thought the Perserverance rover was magical. I'm part of a drone team, and since we just built a drone that was not much unlike Ingenuity, I wondered if I could "complete" the duo here on Earth entirely from my own vision. This rover is the result of that work. I've gone through four separate unique versions of this rover (and even more "microversions" where I had to redesign parts inside each version to keep up with out-of-stock products and so on), but the hope is that this final rover will be just as mobile as the rover on Mars, MUCH faster (hopefully going at a mile an hour), WAY less power efficient (but to be fair, I don't exactly have the greatest parts at my disposal), and a final cost JUST under $1000 (so it's affordable), and accessible (meaning it is COMPLETELY idiot-proof -- I should be a good test subject for this, since I have not dealt with PCB design in the LEAST --, and has NO soldering/pcbs involved).
 
-### Screenshots of the full assembly.
+## Full Assembly Screenshots
 Okay, before we get started, let's get a few hero renders out of the way.
 <img width="1160" height="734" alt="image" src="https://github.com/user-attachments/assets/6676c012-a744-4464-b192-14bec569b187" />
 <img width="1209" height="728" alt="image" src="https://github.com/user-attachments/assets/54e44a33-d582-49d8-9911-47fb82f72d3f" />
@@ -14,9 +24,10 @@ Okay, before we get started, let's get a few hero renders out of the way.
 <img width="779" height="692" alt="image" src="https://github.com/user-attachments/assets/4282b201-71b7-4e5f-95c7-68f8b08242f5" />
 <img width="900" height="641" alt="image" src="https://github.com/user-attachments/assets/5e02f464-8cb5-4562-817a-8b53bcaf70d9" />
 <img width="811" height="653" alt="image" src="https://github.com/user-attachments/assets/907d392b-3f84-469b-9ffb-63fdbcba52d7" />
-Eventually, when I build this, I should be able to atach a few "normal" photos of how it'll look.
 
-### BOM.
+Eventually, when I build this, I should be able to attach a few "normal" photos of how it'll look.
+
+## BOM
 Find the BOM above in the attached files.
 Or, alternatively, here it is below:
 
@@ -65,7 +76,7 @@ Recommended additional common supplies (double-check you have these):
 
 [To be updated as the build proceeds].
 
-### Instructions to print:
+## Printing Instructions
 
 PLEASE PLEASE PLEASE make it easy on yourself and use the 3MF **NOT** the STEP files for actually uploading onto a slicer.
 Whenever you load the part, make sure that if you get the following screen, you click **yes**:
@@ -83,15 +94,21 @@ Since there's so many parts (600 by my estimation), I will NOT be going over how
 
 Eventually, I will make a complete tutorial for how the rover will be built (step-by-step), with photos (or a video).
 
-### Instructions to wire:
+## Wiring Instructions
 
 THE ROVER IS COMPLETELY SOLDERLESS. IT IS DESIGNED TO NOT REQUIRE A PCB, BUT RATHER EASILY SOURCED PARTS ONLINE. There is nothing but a bit of cutting wires/sliding them into screw terminals or WAGO lever nuts. The rough diagram can be seen in the following image, subject to change (as soon as I build it and test it myself).
+<img width="480" height="640" alt="image" src="https://github.com/user-attachments/assets/4522ce63-89ad-4b6a-9d7c-93abc6f2a03d" />
 <img width="1165" height="922" alt="0" src="https://github.com/user-attachments/assets/3638eef6-f6de-4540-a2af-545747c95600" />
 
 As you can see here, this is the rough wiring layout. Connect the battery to crimped spade terminal wires (6-12 gauge), connect the other end to an ANL fuse (with ring lugs, again, crimped), to the power switch and then the buck converter (set at 12V). Route the wire from the buck converter to three separate lines via the WAGO (respectively), to the Pi, and to the servo power lines. The rest of the diagram can be read as follows. Remember, there must be power injection with the servos on top of the star topography, as there would be significant browning near stall. This can be done by taking each male-JST connector, and directing that to a female-female wire, and leading that to another male-JST connector (keeping the ground and signal wires the same, but exchanging the hot/positive lead for a voltage line out of another WAGO lever nut. Once I build this, I will add photos and a detailed guide of how this can be accomplished (after all, right now this is just all theoretical). Soon, everything should be up! Right now, it is as bare-bones as it gets, but I should have this sorted out in just a little bit of time.
 
-### Instructions to code:
-Setting up the Pi: Downloading the Imager.
+This is going to be updated once I finalize the wiring, but a few teasers as of right now:
+<img width="480" height="640" alt="image" src="https://github.com/user-attachments/assets/c68d8676-f866-45e5-9037-127745b9bcf2" />
+<img width="2048" height="321" alt="image" src="https://github.com/user-attachments/assets/1d55326c-1cd8-486a-910c-ed33ce500ce3" />
+<img width="1024" height="768" alt="image" src="https://github.com/user-attachments/assets/7706d069-737c-484b-ba25-d64f9b2986c0" />
+
+## Setting Up The Pi
+Downloading the Imager.
 Take your SD card, and plug into your computer. Try using either a computer with an SD card slot (with the microSD card in its SD card "sleeve") or get a USB-SD card reader.
 1. Choose the Raspberry Pi 5 as the device.
 2. Choose the default software (the Raspberry Pi 8GB can tolerate the 64-bit Raspberry Pi OS).
@@ -130,14 +147,14 @@ Setting up the Pi on Boot:
     6. If you wish to change the focal length (and thus the focus), take the plastic knob, point the hollow end towards the camera module, press, and turn. Test out various focal lengths (but be careful as to not damage the electronic) through the hole until you find an appropriate one.
 4. Setting up the __FIRST__ STS3215 Servo:
     1. Connect the servo horns to each servo. Usually, you can simply push into the toothed brass attachment until the horn is flush with the bottom and a click is heard. If the horn is refusing to be attached properly, use your thumb to push until you seat the horn a bit into the tooth (you can tell this is the case if you leave your hand and the horn doesn't move). Then, use your palm to connect it until a loud click is heard. The tolerances are so tight that the latter technique is often necessary (and in my experience the best one). Screw in everything (but leave a bit of leeway, so the horn is stable but the screw can still "wiggle" a bit).
-    2. Find a USB to a USB-C cable. If you do not have one, a traditional USB to a USB-C female socket is acceptable when connected with a USB-C to a USB-C cable (in fact, the latter architecture is the one I chose). Wait a few seconds, and then run dmesg | tail -1. Remember this, this is the port you will use in Step 8. Attach the USB-C port to the bus servo adapter, and the USB to the Pi. Wire a servo through one of the JST ports to the servo's JST port (just be careful for the orientation). Plug in your bus servo adapter with a DC5521 power jack (connected to a 12V power supply for setup).
+    2. Make sure your bus servo adapter has the yellow jumpers set to "B" as labeled on the board. Find a USB to a USB-C cable. If you do not have one, a traditional USB to a USB-C female socket is acceptable when connected with a USB-C to a USB-C cable (in fact, the latter architecture is the one I chose). Attach the USB-C port to the bus servo adapter, and the USB to the Pi. Wire a servo through one of the JST ports to the servo's JST port (just be careful for the orientation). Plug in your bus servo adapter with a DC5521 power jack (connected to a 12V power supply for setup). Wait a few seconds, and then run dmesg | tail -1. Remember this, this is the port you will use in Step 8.
     3. Label the serial bus servo you have just plugged in with tape and a marker as 1. This is your servo ID (which must be unique for EACH of the 12 servos to allow for a functioning daisy-chain network). Label the rest of the 12 servos with similar numbering. You will label each servo with that ID during the following setup.
     4. Run `sudo apt update && sudo apt install unrar -y` This downloads a program capable of unzipping rar files on Linux (which is the format provided by Waveshare's ST-series servos).
     5. [Download the Waveshare ST-series Python control library.](https://files.waveshare.com/wiki/Bus_Servo_Driver_HAT_A/SCServo_Linux.rar) This will be the code that will help you setup the serial bus servos. Download onto a predetermined location, and then run `unrar x SCServo_Linux.rar` This will unzip the file, allowing for setup. Then, run `sudo apt install cmake -y` CMake will be the application that actually sets up your code and allows you to control the servos.
     6. Then, open your SCServoLinux file in a new terminal (right click the SCServoLinux file -inside the SCServoLinux_220329, and then click "Open in Terminal"). Then, run `cmake .` Then, run `make SCServo` It should say "[100%] Built target SCServo"
     7. Then, type in `cd examples/SMS_STS/WritePos` Run `nano WritePos.cpp` Change the 17th line to say "1000000" instead of "115200." This is the servo's baud rate, and it is 1000000 (the hardcoded value is wrong). Run Ctrl+O, click Enter, then run Ctrl+X. Now, you may run `cmake .` and then `make WritePos`
     8. Go back to the port from Step 2. Run `sudo ./WritePos [port]`, where your final command should look like `sudo ./WritePos /dev/ttyACM2` When you want this to stop, you can run Ctrl+C. Your servo should spin.
-5. Setting up __THE SECOND__ Servo.
+5. Setting up __THE SECOND__ Servo:
     1. Disconnect power from the serial bus servo adapter and the USB-C cable connecting the board to the Pi. Once power is off, disconnect the first serial bus servo and replace it for the one labeled "2" and wire that.
     2. Run `mkdir ~/SCServo_Linux_220329/SCServo_Linux/examples/SMS_STS/ChangeID` Find the ChangeID.cpp file attached above and drop it into the newly created ChangeID folder.
     3. Run:
@@ -155,7 +172,61 @@ Setting up the Pi on Boot:
        ```
        Where [port] is in the format "ttyACM0".
     4. Run `nano WritePos.cpp` and check if "sm_st.WritePosEx" has the number 2 following it. This is the ID the Pi will ping. If it is not 2, change it to be 2 (ONLY IF YOU DID CHANGE THE NUMBER, run Ctrl+O, Enter, Ctrl+X. Then, open the WritePos file in a separate terminal and run `cmake .`, then `make`). Then, run `sudo ./WritePos /dev/[port]` Your second servo should know spin.
-6. Setting up __SUBSEQUENT__ Servos.
+6. Setting up __SUBSEQUENT__ Servos:
     1. Disconnect power from the serial bus servo adapter and the USB-C cable connecting the board to the Pi. Once power is off, disconnect the first serial bus servo and replace it for the next labeled servo and wire that.
     2. Run `nano ChangeID.cpp` in the ChangeID folder terminal and change the `#define NEW_ID 2` to have your new number replacing the 2 (or whatever other number is there). Ctrl+O, Enter, Ctrl+X, and in that same terminal, run `cmake .` `make` and finally `sudo ./ChangeID /dev/[port]`
     3. Run `nano WritePos.cpp` in the WritePos folder terminal and change the `WritePosEx` command to have your new ID number. Ctrl+O, Enter, Ctrl+X, run `cmake .` `make` and finally `sudo ./WritePos /dev/[port]` so that your newest servo spins.
+7. Setting up the US-100s:
+    1. Run `sudo apt full-upgrade` and then `sudo apt install gpiod` Then, run `sudo apt install python3-gpiozero`
+    2. Run `gpiodetect` and check the "gpiochip" that has "pinctrl-rp1". For most boots, this is "gpiochip0." Since I have the version of the pi with this boot, I have saved the code to run with chip=0. If you have a different gpio chip connected to "pinctrl," change the provided code to have that chip number at the 6th line's `chip=` section.
+    3. Remove the black jumper out of each US-100 sensor (this is because we will be using each in "HC-SR04" mode, NOT UART mode. Then wire ONE sensor at a time with a following arrangement (pull up a GPIO pin layout for the Raspberry Pi online while setting up), noting that you will plug the first sensor, test it, remove it, plug in the second sensor, test it, remove it, and so on for the third sensor:
+
+       a. The first sensor should have its VCC port connected to PIN 1, one of its ground ports connected to PIN 9, its Trig/TX pin connected to GPIO 5 OR PIN 29, and its Echo pin connected to GPIO 6 or PIN 31.
+       
+       b. The second sensor should have its VCC port connected to PIN 1, one of its ground ports connected to PIN 9, its Trig/TX pin connected to GPIO 17 or PIN 11, and its Echo pin connected to GPIO 27 or PIN 13.
+       
+       c. The third sensor should have its VCC port connected to PIN 1, one of its ground ports connected to PIN 9, its Trig/TX pin connected to GPIO 23 or PIN 16, and its Echo pin connected to GPIO 24 or PIN 18.
+
+       <img width="800" height="450" alt="image" src="https://github.com/user-attachments/assets/66fc82b8-9b74-4fde-8409-ae129edd2ee5" />
+
+    5. Through the top left of the desktop, open programming and then Thonny. Copy/paste the following code into it.
+        ```
+        import time
+        from gpiozero import DistanceSensor
+        from gpiozero.pins.lgpio import LGPIOFactory
+        
+        # Run gpiodetect, whichever chip has "pinctrl" associated with it is the chip below
+        factory = LGPIOFactory(chip=0)
+        
+        sensors = {
+            "left":   DistanceSensor(echo=6,  trigger=5,  pin_factory=factory, max_distance=4.5),
+            # "center": DistanceSensor(echo=27, trigger=17, pin_factory=factory, max_distance=4.5),
+            # "right":  DistanceSensor(echo=24, trigger=23, pin_factory=factory, max_distance=4.5),
+        }
+        
+        
+        def read_all():
+            # Time sleep meant to eliminate cross-talk
+            readings = {}
+            for name, sensor in sensors.items():
+                readings[name] = sensor.distance * 100
+                time.sleep(0.03)
+            return readings
+        
+        
+        if __name__ == "__main__":
+            try:
+                while True:
+                    readings = read_all()
+                    print(
+                        f"L: {readings['left']:.1f}cm  "
+                        #f"C: {readings['center']:.1f}cm  "
+                        #f"R: {readings['right']:.1f}cm"
+                    )
+                    time.sleep(0.1)
+            except KeyboardInterrupt:
+                pass
+        ```
+    7. Run the code. You should now have working ultrasonic sensors. Finally, repeat the process. Make sure you comment out the other ultrasonic sensors (ie, if you're on your second sensor, comment out left and right in both the __print__ and __sensors__ subheadings, and on the third sensor, comment out left and center). If this works, you're all set up for any of the later code!
+  
+[To be continued].

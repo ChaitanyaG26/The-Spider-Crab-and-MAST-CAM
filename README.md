@@ -2,14 +2,14 @@
 A rover (rough "perserverance-replica") equipped with rocker bogie (with a differential bar) suspension, capable of object detection + avoidance (with the RPi AI camera/US-100 sensors), remote control, and autonomous travel (with an onboard GPS). Modeled around the STS-3215 servo.
 
 ## Table of Contents
-- [Introduction](#The-Spider-Crab-and-MAST-CAM)
-- [Table of Contents](##Table-of-Contents)
-- [Hack-Club Q/A](##Hack-Club-Required-Q&A)
-- [Full Assembly Screenshots](##-Full-Assembly-Screenshots)
-- [Bill of Materials](##BOM)
-- [Instructions For Printing](##Printing-Instructions)
-- [Instructions For Wiring](##Wiring-Instructions)
-- [Setting Up The Pi](##Setting-Up-The-Pi)
+- [Introduction](#the-spider-crab-and-mast-cam)
+- [Table of Contents](##table-of-contents)
+- [Hack-Club Q/A](##hack-club-required-q&a)
+- [Full Assembly Screenshots](##full-assembly-screenshots)
+- [Bill of Materials](##bom)
+- [Instructions For Printing](##printing-instructions)
+- [Instructions For Wiring](##wiring-instructions)
+- [Setting Up The Pi](##setting-up-the-pi)
 
 ## Hack-Club Required Q&A
 So, let's see:

@@ -1,5 +1,5 @@
 # The Spider-Crab and MAST-CAM
-A rover (rough "perserverance-replica") equipped with rocker bogie (with a differential bar) suspension, capable of object detection + avoidance (with the RPi AI camera/US-100 sensors), remote control, and autonomous travel (with an onboard GPS). Modeled around the STS-3215 servo. (Special thanks here to Logan Wheatcroft for helping me spell "attach").
+A rover (rough "perserverance-replica") equipped with rocker bogie (with a differential bar) suspension, capable of object detection + avoidance (with the RPi AI camera/US-100 sensors), remote control, and autonomous travel (with an onboard GPS). Modeled around the STS-3215 servo. (Special thanks here to Logan Wheatcroft for helping me spell "attach"). __THERE IS NO PCB ON THIS BUILD. IT IS SOLDERLESS.__
 
 ## Table of Contents
 - [The Spider-Crab and MAST-CAM](#the-spider-crab-and-mast-cam)
@@ -97,9 +97,15 @@ Eventually, I will make a complete tutorial for how the rover will be built (ste
 ## Wiring Instructions
 
 THE ROVER IS COMPLETELY SOLDERLESS. IT IS DESIGNED TO NOT REQUIRE A PCB, BUT RATHER EASILY SOURCED PARTS ONLINE. There is nothing but a bit of cutting wires/sliding them into screw terminals or WAGO lever nuts. The rough diagram can be seen in the following image, subject to change (as soon as I build it and test it myself).
+<img width="480" height="640" alt="image" src="https://github.com/user-attachments/assets/4522ce63-89ad-4b6a-9d7c-93abc6f2a03d" />
 <img width="1165" height="922" alt="0" src="https://github.com/user-attachments/assets/3638eef6-f6de-4540-a2af-545747c95600" />
 
 As you can see here, this is the rough wiring layout. Connect the battery to crimped spade terminal wires (6-12 gauge), connect the other end to an ANL fuse (with ring lugs, again, crimped), to the power switch and then the buck converter (set at 12V). Route the wire from the buck converter to three separate lines via the WAGO (respectively), to the Pi, and to the servo power lines. The rest of the diagram can be read as follows. Remember, there must be power injection with the servos on top of the star topography, as there would be significant browning near stall. This can be done by taking each male-JST connector, and directing that to a female-female wire, and leading that to another male-JST connector (keeping the ground and signal wires the same, but exchanging the hot/positive lead for a voltage line out of another WAGO lever nut. Once I build this, I will add photos and a detailed guide of how this can be accomplished (after all, right now this is just all theoretical). Soon, everything should be up! Right now, it is as bare-bones as it gets, but I should have this sorted out in just a little bit of time.
+
+This is going to be updated once I finalize the wiring, but a few teasers as of right now:
+<img width="480" height="640" alt="image" src="https://github.com/user-attachments/assets/c68d8676-f866-45e5-9037-127745b9bcf2" />
+<img width="2048" height="321" alt="image" src="https://github.com/user-attachments/assets/1d55326c-1cd8-486a-910c-ed33ce500ce3" />
+<img width="1024" height="768" alt="image" src="https://github.com/user-attachments/assets/7706d069-737c-484b-ba25-d64f9b2986c0" />
 
 ## Setting Up The Pi
 Downloading the Imager.

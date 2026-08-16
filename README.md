@@ -3,13 +3,13 @@ A rover (rough "perserverance-replica") equipped with rocker bogie (with a diffe
 
 ## Table of Contents
 - [Introduction](#the-spider-crab-and-mast-cam)
-- [Table of Contents](##table-of-contents)
-- [Hack-Club Q/A](##hack-club-required-q&a)
-- [Full Assembly Screenshots](##full-assembly-screenshots)
-- [Bill of Materials](##bom)
-- [Instructions For Printing](##printing-instructions)
-- [Instructions For Wiring](##wiring-instructions)
-- [Setting Up The Pi](##setting-up-the-pi)
+- [Table of Contents](#table-of-contents)
+- [Hack-Club Q/A](#hack-club-required-qa)
+- [Full Assembly Screenshots](#full-assembly-screenshots)
+- [Bill of Materials](#bom)
+- [Instructions For Printing](#printing-instructions)
+- [Instructions For Wiring](#wiring-instructions)
+- [Setting Up The Pi](#setting-up-the-pi)
 
 ## Hack-Club Required Q&A
 So, let's see:

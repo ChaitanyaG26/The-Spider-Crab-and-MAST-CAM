@@ -1,5 +1,5 @@
 # The Spider-Crab and MAST-CAM
-A rover (rough "perserverance-replica") equipped with rocker bogie (with a differential bar) suspension, capable of object detection + avoidance (with the RPi AI camera/US-100 sensors), remote control, and autonomous travel (with an onboard GPS). Modeled around the STS-3215 servo.
+A rover (rough "perserverance-replica") equipped with rocker bogie (with a differential bar) suspension, capable of object detection + avoidance (with the RPi AI camera/US-100 sensors), remote control, and autonomous travel (with an onboard GPS). Modeled around the STS-3215 servo. (Special thanks here to Logan Wheatcroft for helping me spell "attach").
 
 ## Table of Contents
 - [The Spider-Crab and MAST-CAM](#the-spider-crab-and-mast-cam)
@@ -24,7 +24,8 @@ Okay, before we get started, let's get a few hero renders out of the way.
 <img width="779" height="692" alt="image" src="https://github.com/user-attachments/assets/4282b201-71b7-4e5f-95c7-68f8b08242f5" />
 <img width="900" height="641" alt="image" src="https://github.com/user-attachments/assets/5e02f464-8cb5-4562-817a-8b53bcaf70d9" />
 <img width="811" height="653" alt="image" src="https://github.com/user-attachments/assets/907d392b-3f84-469b-9ffb-63fdbcba52d7" />
-Eventually, when I build this, I should be able to atach a few "normal" photos of how it'll look.
+
+Eventually, when I build this, I should be able to attach a few "normal" photos of how it'll look.
 
 ## BOM
 Find the BOM above in the attached files.

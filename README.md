@@ -1,5 +1,5 @@
 # The Spider-Crab and MAST-CAM
-A rover (rough "perserverance-replica") equipped with rocker bogie (with a differential bar) suspension, capable of object detection + avoidance (with the RPi AI camera/US-100 sensors), remote control, and autonomous travel (with an onboard GPS). Modeled around the STS-3215 servo. (Special thanks here to Logan Wheatcroft for helping me spell "attach"). __THERE IS NO PCB ON THIS BUILD. IT IS SOLDERLESS.__
+A rover (rough "perserverance-replica") equipped with rocker bogie (with a differential bar) suspension, capable of object detection + avoidance (with the RPi AI camera/US-100 sensors), remote control, and autonomous travel (with an onboard GPS). __THERE IS NO PCB ON THIS BUILD. IT IS SOLDERLESS.__ Modeled around the STS-3215 servo. (Special thanks here to Logan Wheatcroft for helping me spell "attach" and getting this project reviewed, and yes, his research project IS real despite what he may say).
 
 ## Table of Contents
 - [The Spider-Crab and MAST-CAM](#the-spider-crab-and-mast-cam)

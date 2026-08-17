@@ -179,13 +179,13 @@ Setting up the Pi on Boot:
 7. Setting up the US-100s:
     1. Run `sudo apt full-upgrade` and then `sudo apt install gpiod` Then, run `sudo apt install python3-gpiozero`
     2. Run `gpiodetect` and check the "gpiochip" that has "pinctrl-rp1". For most boots, this is "gpiochip0." Since I have the version of the pi with this boot, I have saved the code to run with chip=0. If you have a different gpio chip connected to "pinctrl," change the provided code to have that chip number at the 6th line's `chip=` section.
-    3. Remove the black jumper out of each US-100 sensor (this is because we will be using each in "HC-SR04" mode, NOT UART mode. Then wire ONE sensor at a time with a following arrangement (pull up a GPIO pin layout for the Raspberry Pi online while setting up), noting that you will plug the first sensor, test it, remove it, plug in the second sensor, test it, remove it, and so on for the third sensor:
+    3. Remove the black jumper out of each US-100 sensor (this is because we will be using each in "HC-SR04" mode, NOT UART mode. Then wire EACH sensor with the following arrangement (pull up a GPIO pin layout for the Raspberry Pi online while setting up), noting that since all three are on different GPIO pins, you may connect all three sensors at the same time to fully test sensor capability:
 
        a. The first sensor should have its VCC port connected to PIN 1, one of its ground ports connected to PIN 9, its Trig/TX pin connected to GPIO 5 OR PIN 29, and its Echo pin connected to GPIO 6 or PIN 31.
        
-       b. The second sensor should have its VCC port connected to PIN 1, one of its ground ports connected to PIN 9, its Trig/TX pin connected to GPIO 17 or PIN 11, and its Echo pin connected to GPIO 27 or PIN 13.
+       b. The second sensor should have its VCC port connected to PIN 17, one of its ground ports connected to PIN 6, its Trig/TX pin connected to GPIO 17 or PIN 11, and its Echo pin connected to GPIO 27 or PIN 13.
        
-       c. The third sensor should have its VCC port connected to PIN 1, one of its ground ports connected to PIN 9, its Trig/TX pin connected to GPIO 23 or PIN 16, and its Echo pin connected to GPIO 24 or PIN 18.
+       c. The third sensor should have its VCC port connected to PIN 2, one of its ground ports connected to PIN 14, its Trig/TX pin connected to GPIO 23 or PIN 16, and its Echo pin connected to GPIO 24 or PIN 18.
 
        <img width="800" height="450" alt="image" src="https://github.com/user-attachments/assets/66fc82b8-9b74-4fde-8409-ae129edd2ee5" />
 
@@ -200,8 +200,8 @@ Setting up the Pi on Boot:
         
         sensors = {
             "left":   DistanceSensor(echo=6,  trigger=5,  pin_factory=factory, max_distance=4.5),
-            # "center": DistanceSensor(echo=27, trigger=17, pin_factory=factory, max_distance=4.5),
-            # "right":  DistanceSensor(echo=24, trigger=23, pin_factory=factory, max_distance=4.5),
+            "center": DistanceSensor(echo=27, trigger=17, pin_factory=factory, max_distance=4.5),
+            "right":  DistanceSensor(echo=24, trigger=23, pin_factory=factory, max_distance=4.5),
         }
         
         
@@ -220,13 +220,13 @@ Setting up the Pi on Boot:
                     readings = read_all()
                     print(
                         f"L: {readings['left']:.1f}cm  "
-                        #f"C: {readings['center']:.1f}cm  "
-                        #f"R: {readings['right']:.1f}cm"
+                        f"C: {readings['center']:.1f}cm  "
+                        f"R: {readings['right']:.1f}cm"
                     )
                     time.sleep(0.1)
             except KeyboardInterrupt:
                 pass
         ```
-    7. Run the code. You should now have working ultrasonic sensors. Finally, repeat the process. Make sure you comment out the other ultrasonic sensors (ie, if you're on your second sensor, comment out left and right in both the __print__ and __sensors__ subheadings, and on the third sensor, comment out left and center). If this works, you're all set up for any of the later code!
+    7. Run the code. You should now have working ultrasonic sensors. If this works, you're all set up for any of the later code! If one does not work, wire it individually in the same configuration to troubleshoot. Common errors involve incorrect wiring (ie, wrong gpio pins are connected OR each DuPont connector is improperly secured) and/or failing to download the correct modules/copying the proper code. This works on the Pi 5 ONLY; older, outdated modules like pigpio are necessary for older models.
   
 [To be continued].

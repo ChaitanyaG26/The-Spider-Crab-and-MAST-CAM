@@ -26,7 +26,7 @@ Okay, before we get started, let's get a few hero renders out of the way.
 <img width="900" height="641" alt="image" src="https://github.com/user-attachments/assets/5e02f464-8cb5-4562-817a-8b53bcaf70d9" />
 <img width="811" height="653" alt="image" src="https://github.com/user-attachments/assets/907d392b-3f84-469b-9ffb-63fdbcba52d7" />
 
-Eventually, when I build this, I should be able to attach a few "normal" photos of how it'll look.
+Eventually, when I build this, I should be able to attach a few "normal" photos of how it'll look. [You may find the final assembly here.](https://cad.onshape.com/documents/4276ee27674d5cd4437829d8/w/b68ed14a30814a824c43fb7e/e/30365733099079a1b69868d1?renderMode=0&uiState=6a78f4664b6102bbb3720076)
 
 ## BOM
 Find the BOM above in the attached files.

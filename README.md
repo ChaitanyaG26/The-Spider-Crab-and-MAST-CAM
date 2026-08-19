@@ -88,10 +88,8 @@ Follow the link above. Another quick teaser:
 <img width="768" height="1024" alt="image" src="https://github.com/user-attachments/assets/7f734557-85f6-4847-b192-476a2d73c774" />
 
 ## [Wiring Instructions](docs/wiring.md)
-This is going to be updated once I finalize the wiring, but a few teasers as of right now:
+This is going to be updated once I finalize the wiring, but a teaser as of right now:
 <img width="480" height="640" alt="image" src="https://github.com/user-attachments/assets/c68d8676-f866-45e5-9037-127745b9bcf2" />
-<img width="2048" height="321" alt="image" src="https://github.com/user-attachments/assets/1d55326c-1cd8-486a-910c-ed33ce500ce3" />
-<img width="1024" height="768" alt="image" src="https://github.com/user-attachments/assets/7706d069-737c-484b-ba25-d64f9b2986c0" />
 
 ## [Assembly Instructions](docs/assembly.md)
 [To be created].

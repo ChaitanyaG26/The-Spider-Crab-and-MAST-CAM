@@ -161,3 +161,7 @@ Hopefully both of us can fix this eventually.
 
  
 [To be continued]. If ANY of the steps above return an error or an issue in setup, you may contact me at chaitanyag2612@gmail.com for support.
+
+[Go back home.](/README.md)
+
+[Onto the next tutorial!](/docs/wiring.md)

@@ -49,3 +49,6 @@ Photos of the print plates:
 <img width="1244" height="897" alt="image" src="https://github.com/user-attachments/assets/aadd1307-10e3-4340-9ba1-9510dddac69e" />
 
 Eventually, I will make a complete tutorial for how the rover will be built (step-by-step), with photos (or a video).
+
+[Go back home.](/docs/readme.md)
+[Onto the next tutorial!](/docs/electronics-setup.md)

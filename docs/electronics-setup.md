@@ -1,5 +1,5 @@
 ## Setting Up The Pi
-Note that this step should take place BEFORE the wiring is finalized (ie, the servos are included in the wiring), so everything can be tested properly and debugged (at least everything relevant to the coding).
+Note that this step should take place BEFORE the wiring is finalized (ie, the servos are included in the wiring), so everything can be tested properly and debugged (at least everything relevant to the coding), or, alternatively, before the wiring altogether.
 
 <img width="1024" height="768" alt="image" src="https://github.com/user-attachments/assets/cff378a4-e67e-4ebd-aaf7-3c19dcf5902b" />
 A quick preview at what y'all are getting into.

@@ -1,5 +1,5 @@
 # The Spider-Crab and MAST-CAM
-A rover (rough "perserverance-replica") equipped with rocker bogie (with a differential bar) suspension, capable of object detection + avoidance (with the RPi AI camera/US-100 sensors), remote control, and autonomous travel (with an onboard GPS). __THERE IS NO PCB ON THIS BUILD. IT IS SOLDERLESS.__ Modeled around the STS-3215 servo. (Special thanks here to Logan Wheatcroft for helping me spell "attach" and getting this project reviewed, and yes, his research project IS real despite what he may say).
+A rover (rough "perserverance-replica") equipped with rocker bogie (with a differential bar) suspension, capable of object detection + avoidance (with the RPi AI camera/US-100 sensors), remote control, and autonomous travel (with an onboard GPS). __THERE IS NO PCB ON THIS BUILD. IT IS SOLDERLESS.__ Modeled around the STS-3215 servo. (Special thanks here to Logan Wheatcroft for helping me spell "attach" and getting this project reviewed, and yes, his research project IS real despite what he may say, and of course, SWN from Print Legion for printing everything, alongside my brother -- who "singlehandedly got my project reviewed").
 
 ## Table of Contents
 - [The Spider-Crab and MAST-CAM](#the-spider-crab-and-mast-cam)
@@ -31,42 +31,42 @@ Eventually, when I build this, I should be able to attach a few "normal" photos 
 Find the BOM above in the attached files.
 Or, alternatively, here it is below:
 
-| Quantity | Item | Description | Manufacturer | Link | Total Cost |
-| :--- | :--- | :--- | :--- | :--- | :--- |
-| 24 | JST PH 2mm 3-Pin to Male | Allows for power-injection to the Feetech servos. | Adafruit | https://www.adafruit.com/product/3893 |  $ 144.95  |
-| 3 | US-100 Ultrasonic Sensor | Allows the rover to navigate terrain/avoid objects. |  | https://www.adafruit.com/product/4019 |  |
-| 1 | Raspberry Pi Camera Cable, 500mm | Allows the camera module to freely rotate across its axes of freedom. |  | https://www.adafruit.com/product/5820 |  |
-| 1 | Raspberry Pi AI Camera | Allows the rover to have object detection/recognition capabilities. |  | https://www.adafruit.com/product/6009 |  |
-| 1 | Raspberry Pi 5, 8GB | The "brains" of the rover. | AAAWave | https://aaawave.com/products/raspberry-pi-5-development-broad?variant=51441087152449 |  $ 161.63  |
-| 1 | Waveshare Serial Bus Driver | Allows for the Pi to communicate with the serial bus servos. | eBay | https://www.ebay.com/itm/206185697206?mkevt=1&mkpid=0&emsid=e11412.m144671.l197929&mkcid=7&ch=osgood&euid=6d034ae6c7bd442a96e4e9cbff91307c&bu=45719063109&exe=0&ext=0&osub=-1%7E1&crd=20260803165232&segname=11412 |  $ 12.23  |
-| 6 | Feetech STS3215 | Allows for the rover to move (both its wheels and the camera). | Aliexpress | https://www.aliexpress.us/item/3256808670629323.html?spm=a2g0o.order_list.order_list_main.41.4d5c18021PISjv&gatewayAdapt=glo2usa |  $ 404.07  |
-| 1 | Soldering Iron, HS02A | Necessary to attach the heat-set inserts, tool. |  | https://www.aliexpress.us/item/3256809503553320.html?spm=a2g0o.order_list.order_list_main.47.4d5c18021PISjv&gatewayAdapt=glo2usa |  |
-| 1 | Hot Air Gun | Necessary to secure the shrink tubing to properly insulate wires. |  | https://www.aliexpress.us/item/3256810350606440.html?spm=a2g0o.order_list.order_list_main.53.4d5c18021PISjv&gatewayAdapt=glo2usa |  |
-| 1 | Heat Shrink Tubing Kit | Necessary to electrically insulate certain wires. |  | https://www.aliexpress.us/item/3256807959988149.html?spm=a2g0o.order_list.order_list_main.35.4d5c18021PISjv&gatewayAdapt=glo2usa |  |
-| 1 | WAGO 221-415 Lever Nuts | Necessary to proper distribute power as desired. |  | https://www.aliexpress.us/item/3256811952946871.html?spm=a2g0o.order_list.order_list_main.29.4d5c18021PISjv&gatewayAdapt=glo2usa |  |
-| 1 | Crimpling "Plier" | Necessary to properly attach the solderless lugs/terminals. |  | https://www.aliexpress.us/item/2251832197019276.html?spm=a2g0o.order_list.order_list_main.17.4d5c18021PISjv&gatewayAdapt=glo2usa |  |
-| 1 | USB-C to Screw Terminals | Necessary to provide the RPi power through bare wires. |  | https://www.aliexpress.us/item/3256812221028465.html?spm=a2g0o.order_list.order_list_main.11.4d5c18021PISjv&gatewayAdapt=glo2usa |  |
-| 2 | 1M, 12AWG Wire | Facilitates an electrical connection across parts. |  | https://www.aliexpress.us/item/3256808222999562.html?spm=a2g0o.order_list.order_list_main.5.4d5c18021PISjv&gatewayAdapt=glo2usa |  |
-| 1 | RPi 5, Active Cooler | Allows for smooth Pi operation, prevents overheating. | Amazon | https://www.amazon.com/dp/B0CW164TCW?ref_=ppx_hzod_title_dt_b_fed_asin_title_0_0 |  $ 162.99  |
-| 1 | 12V, 30A Daiertek Switch | A manual power switch for the rover. |  | https://www.amazon.com/dp/B0FL6B75PM?ref_=ppx_hzod_title_dt_b_fed_asin_title_1_0 |  |
-| 1 | 20A ANL Fuse (and Holder) | Protects electronics downstream. |  | https://www.amazon.com/dp/B01LXQWZ7L?ref_=ppx_hzod_title_dt_b_fed_asin_title_1_1 |  |
-| 1 | VK-162 GPS | Allows the Raspberry Pi to navigate via GPS. |  | https://www.amazon.com/dp/B078Y52FGQ?ref_=ppx_hzod_title_dt_b_fed_asin_title_1_2 |  |
-| 1 | Rod Ends (Small) | Allow for the rocker-bogie suspension to function. |  | https://www.amazon.com/dp/B0828TMYLD?ref_=ppx_hzod_title_dt_b_fed_asin_title_2_0 |  |
-| 1 | 120PCS, M3x5.7 Heat Set Inserts | Allow for the printed parts to be fastened together. |  | https://www.amazon.com/dp/B0D7M4WWBW?ref_=ppx_hzod_title_dt_b_fed_asin_title_2_1 |  |
-| 1 | 2300 PCS, M3 Screws Kit | Necessary hardware for the assembly to be possible. |  | https://www.amazon.com/dp/B0FGX859K8?ref_=ppx_hzod_title_dt_b_fed_asin_title_2_2 |  |
-| 1 | Flanged Ball Bearing | Necessary hardware for the rocker-bogie to be possible. |  | https://www.amazon.com/dp/B0G1B7H48R?ref_=ppx_hzod_title_dt_b_fed_asin_title_2_3 |  |
-| 1 | Breadboard Jumper Wires | Allow for power-injection to the daisy-chained servos. |  | https://www.amazon.com/dp/B07GD2PGY4?ref_=ppx_hzod_title_dt_b_fed_asin_title_2_4 |  |
-| 2 | Adjustable DC Buck Converter | Allow for the 12V battery to transfer power downstream. |  | https://www.amazon.com/dp/B099S2VQ2Q?ref_=ppx_hzod_title_dt_b_fed_asin_title_0_0 |  $ 129.46  |
-| 1 | PTFE/Plumber's Tape | Facilitate the physical "bushing" inside the wheels. |  | https://www.amazon.com/dp/B091913Z7F?ref_=ppx_hzod_title_dt_b_fed_asin_title_1_0 |  |
-| 1 | 12V, 15Ah LiFePO4 | Powers the rover (hopefully for 2+ hours). |  | https://www.amazon.com/dp/B0CSWMF35Q?ref_=ppx_hzod_title_dt_b_fed_asin_title_1_1 |  |
-| 1 | Spade Terminal Connectors | Allow for power to be transmitted from the battery downstream solderlessly. |  | https://www.amazon.com/dp/B0B4H54KPS?ref_=ppx_hzod_title_dt_b_fed_asin_title_2_0 |  |
-| 1 | Digital Multimeter | Checking if the electronic components are viable. |  | https://www.amazon.com/dp/B08CX9W7G3?ref_=ppx_hzod_title_dt_b_fed_asin_title_0_0 |  $ 38.43  |
-| 1 | Ring Lugs Set | Allow for wires to be crimped onto the ANL fuse. |  | https://www.amazon.com/dp/B0F99P7SGT?ref_=ppx_hzod_title_dt_b_fed_asin_title_1_0 |  |
-| 1 | 12V LiFePO4 Charger | Charges the battery. |  | https://www.amazon.com/dp/B0G3ZNWC4J?ref_=ppx_hzod_title_dt_b_fed_asin_title_1_1 |  |
-| 1 | M4x10mm Screws | Necessary hardware for the assembly to be possible. |  | https://www.amazon.com/dp/B0FH2T8PD1?ref_=ppx_hzod_title_dt_b_fed_asin_title_0_0 |  $ 4.30  |
-| 1 | ASA Filament, 2kgs (1.2ish needed) | Filament for prints. |  | https://www.amazon.com/dp/B0G2L8HKB8?ref_=ppx_hzod_title_dt_b_fed_asin_title_0_0 |  $ 37.87  |
-| 1 | TPU 95A Filament, 1g (0.8ish needed) | Filament for prints. |  | https://www.amazon.com/dp/B07VDP2S3P?ref_=ppx_hzod_title_dt_b_fed_asin_title_0_0 |  $ 25.97  |
-| Total: |  |  |  |  |  $ 1,121.90  |
+| Quantity | Item | Description | Source | Total Cost |
+| :--- | :---: | :---: | :---: | ---: |
+| 24 | [JST 3-Pin to Male](https://www.adafruit.com/product/3893) | Allows for power-injection to the Feetech servos. | Adafruit |  $144.95  |
+| 3 | [US-100 Ultrasonic Sensor](https://www.adafruit.com/product/4019) | Allows the rover to navigate terrain/avoid objects. | |  |
+| 1 | [Pi Camera Cable, 500mm](https://www.adafruit.com/product/5820) | Allows the camera module to freely move. | |  |
+| 1 | [Raspberry Pi AI Camera](https://www.adafruit.com/product/6009) | Allows the rover to have object detection/recognition capabilities. | |  |
+| 1 | [Raspberry Pi 5, 8GB](https://aaawave.com/products/raspberry-pi-5-development-broad?variant=51441087152449) | The "brains" of the rover. | AAAWave |  $161.63  |
+| 1 | [Bus Servo Adapter](https://www.ebay.com/itm/206185697206?mkevt=1&mkpid=0&emsid=e11412.m144671.l197929&mkcid=7&ch=osgood&euid=6d034ae6c7bd442a96e4e9cbff91307c&bu=45719063109&exe=0&ext=0&osub=-1%7E1&crd=20260803165232&segname=11412) | Allows for the Pi to communicate with the serial bus servos. | eBay |  $12.23  |
+| 6 | [Feetech STS3215](https://www.aliexpress.us/item/3256808670629323.html?spm=a2g0o.order_list.order_list_main.41.4d5c18021PISjv&gatewayAdapt=glo2usa) | Allows for the rover to move (both its wheels and the camera). | Aliexpress |  $404.07  |
+| 1 | [Soldering Iron, HS02A](https://www.aliexpress.us/item/3256809503553320.html?spm=a2g0o.order_list.order_list_main.47.4d5c18021PISjv&gatewayAdapt=glo2usa) | Necessary to attach the heat-set inserts, tool. | |  |
+| 1 | [Hot Air Gun](https://www.aliexpress.us/item/3256810350606440.html?spm=a2g0o.order_list.order_list_main.53.4d5c18021PISjv&gatewayAdapt=glo2usa) | Necessary to secure the shrink tubing to properly insulate wires. | |  |
+| 1 | [Heat Shrink Tubing](https://www.aliexpress.us/item/3256807959988149.html?spm=a2g0o.order_list.order_list_main.35.4d5c18021PISjv&gatewayAdapt=glo2usa) | Necessary to electrically insulate certain wires. | |  |
+| 1 | [WAGO 221-415](https://www.aliexpress.us/item/3256811952946871.html?spm=a2g0o.order_list.order_list_main.29.4d5c18021PISjv&gatewayAdapt=glo2usa) | Necessary to proper distribute power as desired. | |  |
+| 1 | [USB-C/Screw Terminal](https://www.aliexpress.us/item/3256812221028465.html?spm=a2g0o.order_list.order_list_main.11.4d5c18021PISjv&gatewayAdapt=glo2usa) | Necessary to provide the RPi power through bare wires. | |  |
+| 2 | [1M, 12AWG Wire](https://www.aliexpress.us/item/3256808222999562.html?spm=a2g0o.order_list.order_list_main.5.4d5c18021PISjv&gatewayAdapt=glo2usa) | Facilitates an electrical connection across parts. | |  |
+| 1 | [RPi 5, Active Cooler](https://www.amazon.com/dp/B0CW164TCW?ref_=ppx_hzod_title_dt_b_fed_asin_title_0_0) | Allows for smooth Pi operation, prevents overheating. | Amazon |  $162.99  |
+| 1 | [12V/30A Daiertek Switch](https://www.amazon.com/dp/B0FL6B75PM?ref_=ppx_hzod_title_dt_b_fed_asin_title_1_0) | A manual power switch for the rover. | |  |
+| 1 | [20A ANL Fuse](https://www.amazon.com/dp/B01LXQWZ7L?ref_=ppx_hzod_title_dt_b_fed_asin_title_1_1) | Protects electronics downstream. | |  |
+| 1 | [VK-162 GPS](https://www.amazon.com/dp/B078Y52FGQ?ref_=ppx_hzod_title_dt_b_fed_asin_title_1_2) | Allows the Raspberry Pi to navigate via GPS. | |  |
+| 1 | [Rod Ends (Small)](https://www.amazon.com/dp/B0828TMYLD?ref_=ppx_hzod_title_dt_b_fed_asin_title_2_0) | Allow for the rocker-bogie suspension to function. | |  |
+| 1 | [M3x5.7 Heat Set Inserts](https://www.amazon.com/dp/B0D7M4WWBW?ref_=ppx_hzod_title_dt_b_fed_asin_title_2_1) | Allow for the printed parts to be fastened together. | |  |
+| 1 | [2300 PCS, M3 Screws Kit](https://www.amazon.com/dp/B0FGX859K8?ref_=ppx_hzod_title_dt_b_fed_asin_title_2_2) | Necessary hardware for the assembly to be possible. | |  |
+| 1 | [Flanged Ball Bearing](https://www.amazon.com/dp/B0G1B7H48R?ref_=ppx_hzod_title_dt_b_fed_asin_title_2_3) | Necessary hardware for the rocker-bogie to be possible. | |  |
+| 1 | [Jumper Cables](https://www.amazon.com/dp/B07GD2PGY4?ref_=ppx_hzod_title_dt_b_fed_asin_title_2_4) | Allow for power-injection to the daisy-chained servos. | |  |
+| 2 | [20A/300W Buck Converter](https://www.amazon.com/dp/B099S2VQ2Q?ref_=ppx_hzod_title_dt_b_fed_asin_title_0_0) | Allow for the 12V battery to transfer power downstream. | |  $129.46  |
+| 1 | [PTFE/Plumber's Tape](https://www.amazon.com/dp/B091913Z7F?ref_=ppx_hzod_title_dt_b_fed_asin_title_1_0) | Facilitate the physical "bushing" inside the wheels. | |  |
+| 1 | [12V, 15Ah LiFePO4](https://www.amazon.com/dp/B0CSWMF35Q?ref_=ppx_hzod_title_dt_b_fed_asin_title_1_1) | Powers the rover (hopefully for 2+ hours). | |  |
+| 1 | [Female Spade Connectors](https://www.amazon.com/dp/B07C9CQ8RT?ref=ppx_yo2ov_dt_b_fed_asin_title) | Allow for solderless power supply. | |  |
+| 1 | [Digital Multimeter](https://www.amazon.com/dp/B08CX9W7G3?ref_=ppx_hzod_title_dt_b_fed_asin_title_0_0) | Checking if the electronic components are viable. | |  $38.43  |
+| 1 | [Ring Lugs Set](https://www.amazon.com/dp/B0F99P7SGT?ref_=ppx_hzod_title_dt_b_fed_asin_title_1_0) | Allow for wires to be crimped onto the ANL fuse. | |  |
+| 1 | [12V LiFePO4 Charger](https://www.amazon.com/dp/B0G3ZNWC4J?ref_=ppx_hzod_title_dt_b_fed_asin_title_1_1) | Charges the battery. | |  |
+| 1 | [M4x10mm Screws](https://www.amazon.com/dp/B0FH2T8PD1?ref_=ppx_hzod_title_dt_b_fed_asin_title_0_0) | Necessary hardware for the assembly to be possible. | |  $4.30  |
+| 1 | [ASA Filament,<br>2kgs (1.2ish needed)](https://www.amazon.com/dp/B0G2L8HKB8?ref_=ppx_hzod_title_dt_b_fed_asin_title_0_0) | Filament for prints. | |  $37.87  |
+| 1 | [TPU 95A Filament,<br>1kg (0.8ish needed)](https://www.amazon.com/dp/B07VDP2S3P?ref_=ppx_hzod_title_dt_b_fed_asin_title_0_0) | Filament for prints. | |  $25.97  |
+| 1 | [Crimpling "Plier"](https://www.amazon.com/dp/B073YG65N2?ref=ppx_yo2ov_dt_b_fed_asin_title) | Necessary to properly attach the solderless lugs/terminals. | | $8.99 |
+| Total: |  |  |  |  $1,121.90  |
 
 Recommended additional common supplies (double-check you have these):
 1. An official raspberry pi 5 power supply (27W).
@@ -84,6 +84,9 @@ Whenever you load the part, make sure that if you get the following screen, you 
 
 If you look at the naming convention for each 3MF files, it is clearly explained what settings are recommended (IE, ASA_#9_20%_3d-cubic\_4walls should be printed in ASA at 20% infill in a cubic sparse infill pattern with 4 walls). Now, this does get more complicated with the TPU. The TPU 3MF files include simple cylinders positioned around holes. These cylinders are modifiers. ***While the rest of the print is to be at 15% gyroid infill with 2 walls, these modifiers should be changed to SIX walls.*** This is VERY crucial. Heat Set Inserts are very annoying with TPU (as I've heard), and for them to be properly fastened/secured, the TPU must be made rigid. To save your time and filament whilst making heat-sets viable, these modifiers are meant to circle each cylindrical hole, providing enough material for the heat-set inserts to properly bite into the thermoplastic. If everything goes right, you should expect around 545g worth of filament being used for TPU\_1. Keep supports on for all prints.
 
+### Adding Modifiers to a Print:
+<img width="1106" height="973" alt="image" src="https://github.com/user-attachments/assets/ca8a8dc9-9583-45ff-8c00-9e97710b48b9" />
+
 Note that the provided settings are the basic settings. If you have other settings for supports, etc, you may use those (as those do not impact strength).
 
 IN TOTAL YOU MAY EXPECT: 817.79g TPU being used (this is with supports) over 51.64 hours of printing. 1099.53g ASA being used (this is also with supports) over 56.05 hours of printing, for a total of around 107.69 hours of printing.
@@ -92,12 +95,45 @@ Tolerances are in-built into the prints, so long as everything is printed in the
 
 Since there's so many parts (600 by my estimation), I will NOT be going over how each of the parts fit, although I believe most of it is obvious: in general, holes of diameter 4mm have a heat-set insert, holes of diamter 3mm allow for M3 screws to be passed, and so on. There are other specific cut-outs for flanged ball bearings (and so on for other parts, such as the rod-end).
 
+Photos of the print plates:
+### ASA #1 AND #2 (remember, these are the EXACT same plate, but one of the two needs to be printed twice or **BOTH NEED TO BE PRINTED ONCE EACH**):
+<img width="1244" height="896" alt="image" src="https://github.com/user-attachments/assets/08ebd970-02eb-41a4-93cd-d96e18a13cee" />
+
+### ASA #3:
+<img width="1244" height="894" alt="image" src="https://github.com/user-attachments/assets/d3de6fe3-866b-45ea-9991-0b0dbd7e6416" />
+
+### ASA #4:
+<img width="1243" height="893" alt="image" src="https://github.com/user-attachments/assets/46add675-29fc-4e27-9f84-cb1ffedf5f87" />
+
+### ASA #5:
+<img width="1241" height="892" alt="image" src="https://github.com/user-attachments/assets/67b5da37-e100-4fc7-bb83-c7ed83b9a324" />
+
+### ASA #6:
+<img width="1242" height="893" alt="image" src="https://github.com/user-attachments/assets/4847d1ab-3d46-4a86-9e59-cb7fdb3b1552" />
+
+### ASA #7:
+<img width="1242" height="894" alt="image" src="https://github.com/user-attachments/assets/5081a057-bce0-4d7d-8b62-180470534e7f" />
+
+### ASA #8:
+<img width="1246" height="895" alt="image" src="https://github.com/user-attachments/assets/9be6e14b-dd17-433c-8f76-f9eea6c6849e" />
+
+### ASA #9:
+<img width="1244" height="898" alt="image" src="https://github.com/user-attachments/assets/f58eb30d-d895-449a-a17a-9a40e6532cbb" />
+
+### TPU #1:
+<img width="1242" height="893" alt="image" src="https://github.com/user-attachments/assets/ec7b078e-4427-4112-866d-ffe64d4749db" />
+
+### TPU #2:
+<img width="1244" height="897" alt="image" src="https://github.com/user-attachments/assets/aadd1307-10e3-4340-9ba1-9510dddac69e" />
+
 Eventually, I will make a complete tutorial for how the rover will be built (step-by-step), with photos (or a video).
 
 ## Wiring Instructions
 
 THE ROVER IS COMPLETELY SOLDERLESS. IT IS DESIGNED TO NOT REQUIRE A PCB, BUT RATHER EASILY SOURCED PARTS ONLINE. There is nothing but a bit of cutting wires/sliding them into screw terminals or WAGO lever nuts. The rough diagram can be seen in the following image, subject to change (as soon as I build it and test it myself).
+
 <img width="480" height="640" alt="image" src="https://github.com/user-attachments/assets/4522ce63-89ad-4b6a-9d7c-93abc6f2a03d" />
+
 <img width="1165" height="922" alt="0" src="https://github.com/user-attachments/assets/3638eef6-f6de-4540-a2af-545747c95600" />
 
 As you can see here, this is the rough wiring layout. Connect the battery to crimped spade terminal wires (6-12 gauge), connect the other end to an ANL fuse (with ring lugs, again, crimped), to the power switch and then the buck converter (set at 12V). Route the wire from the buck converter to three separate lines via the WAGO (respectively), to the Pi, and to the servo power lines. The rest of the diagram can be read as follows. Remember, there must be power injection with the servos on top of the star topography, as there would be significant browning near stall. This can be done by taking each male-JST connector, and directing that to a female-female wire, and leading that to another male-JST connector (keeping the ground and signal wires the same, but exchanging the hot/positive lead for a voltage line out of another WAGO lever nut. Once I build this, I will add photos and a detailed guide of how this can be accomplished (after all, right now this is just all theoretical). Soon, everything should be up! Right now, it is as bare-bones as it gets, but I should have this sorted out in just a little bit of time.

@@ -50,6 +50,6 @@ Photos of the print plates:
 
 Eventually, I will make a complete tutorial for how the rover will be built (step-by-step), with photos (or a video).
 
-[Go back home.](readme.md)
+[Go back home.](README.md)
 
 [Onto the next tutorial!](/docs/electronics-setup.md)

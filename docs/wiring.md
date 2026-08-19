@@ -38,3 +38,7 @@ Once you are done with your test circuit, I highly recommend waiting for prints 
 <img width="768" height="1024" alt="image" src="https://github.com/user-attachments/assets/d0d0158b-a5d8-4514-b9d5-4b4d924dbbfc" />
 
 But either way, I recommend starting in this manner, where your ANL fuse is parallel to the battery to save space and so your wires have minimal questionable contact and bending (no wire undergoes copious amounts of stress).
+
+[Go back home.](/README.md)
+
+[Onto the next tutorial!](/docs/assembly.md)

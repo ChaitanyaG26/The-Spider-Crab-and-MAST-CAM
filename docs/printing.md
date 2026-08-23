@@ -31,7 +31,7 @@ Photos of the print plates:
 <img width="1241" height="892" alt="image" src="https://github.com/user-attachments/assets/67b5da37-e100-4fc7-bb83-c7ed83b9a324" />
 
 ### ASA #6:
-<img width="1242" height="893" alt="image" src="https://github.com/user-attachments/assets/4847d1ab-3d46-4a86-9e59-cb7fdb3b1552" />
+<img width="1239" height="888" alt="image" src="https://github.com/user-attachments/assets/7fbf1ff4-6eee-48cb-b51d-45a41744505e" />
 
 ### ASA #7:
 <img width="1242" height="894" alt="image" src="https://github.com/user-attachments/assets/5081a057-bce0-4d7d-8b62-180470534e7f" />
@@ -40,7 +40,7 @@ Photos of the print plates:
 <img width="1246" height="895" alt="image" src="https://github.com/user-attachments/assets/9be6e14b-dd17-433c-8f76-f9eea6c6849e" />
 
 ### ASA #9:
-<img width="1244" height="898" alt="image" src="https://github.com/user-attachments/assets/f58eb30d-d895-449a-a17a-9a40e6532cbb" />
+<img width="1240" height="888" alt="image" src="https://github.com/user-attachments/assets/27bfd650-5926-412f-a11f-a2501093089f" />
 
 ### TPU #1:
 <img width="1242" height="893" alt="image" src="https://github.com/user-attachments/assets/ec7b078e-4427-4112-866d-ffe64d4749db" />

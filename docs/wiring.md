@@ -1,4 +1,9 @@
 ## Wiring Instructions
+TL;DR WIRING DIAGRAMS: I would HIGHLY recommend reading the next bits of text for a full tutorial on how to wire everything, but here are three "brief" wiring diagrams showcasing how everything will work.
+<img width="5000" height="5000" alt="Schematic1" src="https://github.com/user-attachments/assets/687dee59-c39b-43d1-b041-597e12e0f608" />
+<img width="5000" height="5000" alt="Schematic2" src="https://github.com/user-attachments/assets/b605afab-c75f-49a1-8569-b34b07549fd5" />
+<img width="5000" height="5000" alt="Schematic3" src="https://github.com/user-attachments/assets/f6815dbb-9fa8-44d0-9547-7422adba8e8b" />
+
 THE ROVER IS COMPLETELY SOLDERLESS. IT IS DESIGNED TO NOT REQUIRE A PCB, BUT RATHER EASILY SOURCED PARTS ONLINE. There is nothing but a bit of cutting wires/sliding them into screw terminals or WAGO lever nuts. The rough diagram can be seen in the following image, subject to change (as soon as I build it and test it myself).
 
 <img width="480" height="640" alt="image" src="https://github.com/user-attachments/assets/4522ce63-89ad-4b6a-9d7c-93abc6f2a03d" />

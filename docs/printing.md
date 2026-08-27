@@ -11,7 +11,7 @@ If you look at the naming convention for each 3MF files, it is clearly explained
 
 Note that the provided settings are the basic settings. If you have other settings for supports, etc, you may use those (as those do not impact strength).
 
-IN TOTAL YOU MAY EXPECT: 817.79g TPU being used (this is with supports) over 51.64 hours of printing. 1107.46g ASA being used (this is also with supports) over 56.67 hours of printing, for a total of around 108.31 hours of printing.
+IN TOTAL YOU MAY EXPECT: 817.79g TPU being used (this is with supports) over 51.64 hours of printing. 1107.18g ASA being used (this is also with supports) over 56.67 hours of printing, for a total of around 108.31 hours of printing.
 
 Tolerances are in-built into the prints, so long as everything is printed in the right material (ASA or TPU), as outlined. Remember, any other materials would either be more expensive alternatives, or less viable ones (ie, TPU is the best filament here because it is relatively common, flexible, but has a high temperature deflection point relative to the use-case the rover is ideal for, and ASA is the best rigid common filament with another reasonable temperature deflection point). You can see the overall assembly at this [link](https://cad.onshape.com/documents/4276ee27674d5cd4437829d8/w/b68ed14a30814a824c43fb7e/e/30365733099079a1b69868d1?renderMode=0&uiState=6a78f4664b6102bbb3720076). navigate to "The Spyder-Crab", and then the assembly of the same name), and simply hide the relevant objects to see precisely where everything goes.
 
@@ -25,7 +25,7 @@ Photos of the print plates:
 <img width="1244" height="894" alt="image" src="https://github.com/user-attachments/assets/d3de6fe3-866b-45ea-9991-0b0dbd7e6416" />
 
 ### ASA #4:
-<img width="1243" height="893" alt="image" src="https://github.com/user-attachments/assets/46add675-29fc-4e27-9f84-cb1ffedf5f87" />
+<img width="1243" height="888" alt="image" src="https://github.com/user-attachments/assets/8179cf17-883d-4be0-b9f3-84ce092f9c3c" />
 
 ### ASA #5:
 <img width="1241" height="892" alt="image" src="https://github.com/user-attachments/assets/67b5da37-e100-4fc7-bb83-c7ed83b9a324" />

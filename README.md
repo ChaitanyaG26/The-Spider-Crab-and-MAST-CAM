@@ -70,7 +70,7 @@ Or, alternatively, here it is below:
 | 1 | [Crimpling "Plier"](https://www.amazon.com/dp/B073YG65N2?ref=ppx_yo2ov_dt_b_fed_asin_title) | Necessary to properly attach the solderless lugs/terminals. | | $8.99 |
 | Total: |  |  (with taxes and shipping)  |  |  $1,121.90  |
 
-*Note that for funding purposes, since the Pi and the AI camera are overkill, I will NOT be asking to be reimbursed for these.
+*Note that for funding purposes, since the Pi and the AI camera are overkill, you can try getting a Pi 4/normal camera module 3 for these. The total cost with these instead would be $994.97ish (which, depending on the version/website you look at, is under $1k!!), and excluding the Pi 5/AI camera is $894.97.
 
 Recommended additional common supplies (double-check you have these):
 1. An official raspberry pi 5 power supply (27W).

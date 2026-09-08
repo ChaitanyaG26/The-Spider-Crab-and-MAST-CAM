@@ -48,22 +48,22 @@ Or, alternatively, here it is below:
 | 1 | [WAGO 221-415](https://www.aliexpress.us/item/3256811952946871.html?spm=a2g0o.order_list.order_list_main.29.4d5c18021PISjv&gatewayAdapt=glo2usa) | Necessary to proper distribute power as desired. | |  $8.60  |
 | 1 | [USB-C/Screw Terminal](https://www.aliexpress.us/item/3256812221028465.html?spm=a2g0o.order_list.order_list_main.11.4d5c18021PISjv&gatewayAdapt=glo2usa) | Necessary to provide the RPi power through bare wires. | |  $1.77  |
 | 2 | [1M, 12AWG Wire](https://www.aliexpress.us/item/3256808222999562.html?spm=a2g0o.order_list.order_list_main.5.4d5c18021PISjv&gatewayAdapt=glo2usa) | Facilitates an electrical connection across parts. | |  $10.86  |
-| 1 | [RPi 5, Active Cooler](https://www.amazon.com/dp/B0CW164TCW?ref_=ppx_hzod_title_dt_b_fed_asin_title_0_0) | Allows for smooth Pi operation, prevents overheating. | Amazon |  $162.99  |
-| 1 | [12V/30A Daiertek Switch](https://www.amazon.com/dp/B0FL6B75PM?ref_=ppx_hzod_title_dt_b_fed_asin_title_1_0) | A manual power switch for the rover. | |  |
-| 1 | [20A ANL Fuse](https://www.amazon.com/dp/B01LXQWZ7L?ref_=ppx_hzod_title_dt_b_fed_asin_title_1_1) | Protects electronics downstream. | |  |
-| 1 | [VK-162 GPS](https://www.amazon.com/dp/B078Y52FGQ?ref_=ppx_hzod_title_dt_b_fed_asin_title_1_2) | Allows the Raspberry Pi to navigate via GPS. | |  |
-| 1 | [Rod Ends (Small)](https://www.amazon.com/dp/B0828TMYLD?ref_=ppx_hzod_title_dt_b_fed_asin_title_2_0) | Allow for the rocker-bogie suspension to function. | |  |
-| 1 | [M3x5.7 Heat Set Inserts](https://www.amazon.com/dp/B0D7M4WWBW?ref_=ppx_hzod_title_dt_b_fed_asin_title_2_1) | Allow for the printed parts to be fastened together. | |  |
-| 1 | [2300 PCS, M3 Screws Kit](https://www.amazon.com/dp/B0FGX859K8?ref_=ppx_hzod_title_dt_b_fed_asin_title_2_2) | Necessary hardware for the assembly to be possible. | |  |
-| 1 | [Flanged Ball Bearing](https://www.amazon.com/dp/B0G1B7H48R?ref_=ppx_hzod_title_dt_b_fed_asin_title_2_3) | Necessary hardware for the rocker-bogie to be possible. | |  |
-| 1 | [Jumper Cables](https://www.amazon.com/dp/B07GD2PGY4?ref_=ppx_hzod_title_dt_b_fed_asin_title_2_4) | Allow for power-injection to the daisy-chained servos. | |  |
-| 2 | [20A/300W Buck Converter](https://www.amazon.com/dp/B099S2VQ2Q?ref_=ppx_hzod_title_dt_b_fed_asin_title_0_0) | Allow for the 12V battery to transfer power downstream. | |  $129.46  |
-| 1 | [PTFE/Plumber's Tape](https://www.amazon.com/dp/B091913Z7F?ref_=ppx_hzod_title_dt_b_fed_asin_title_1_0) | Facilitate the physical "bushing" inside the wheels. | |  |
-| 1 | [12V, 15Ah LiFePO4](https://www.amazon.com/dp/B0CSWMF35Q?ref_=ppx_hzod_title_dt_b_fed_asin_title_1_1) | Powers the rover (hopefully for 2+ hours). | |  |
-| 1 | [Female Spade Connectors](https://www.amazon.com/dp/B07C9CQ8RT?ref=ppx_yo2ov_dt_b_fed_asin_title) | Allow for solderless power supply. | |  |
+| 1 | [RPi 5, Active Cooler](https://www.amazon.com/dp/B0CW164TCW?ref_=ppx_hzod_title_dt_b_fed_asin_title_0_0) | Allows for smooth Pi operation, prevents overheating. | Amazon |  $9.90  |
+| 1 | [12V/30A Daiertek Switch](https://www.amazon.com/dp/B0FL6B75PM?ref_=ppx_hzod_title_dt_b_fed_asin_title_1_0) | A manual power switch for the rover. | |  $29.99  |
+| 1 | [20A ANL Fuse](https://www.amazon.com/dp/B01LXQWZ7L?ref_=ppx_hzod_title_dt_b_fed_asin_title_1_1) | Protects electronics downstream. | |  $12.99  |
+| 1 | [VK-162 GPS](https://www.amazon.com/dp/B078Y52FGQ?ref_=ppx_hzod_title_dt_b_fed_asin_title_1_2) | Allows the Raspberry Pi to navigate via GPS. | |  $18.98  |
+| 1 | [Rod Ends (Small)](https://www.amazon.com/dp/B0828TMYLD?ref_=ppx_hzod_title_dt_b_fed_asin_title_2_0) | Allow for the rocker-bogie suspension to function. | |  $9.99  |
+| 1 | [M3x5.7 Heat Set Inserts](https://www.amazon.com/dp/B0D7M4WWBW?ref_=ppx_hzod_title_dt_b_fed_asin_title_2_1) | Allow for the printed parts to be fastened together. | |  $6.47  |
+| 1 | [2300 PCS, M3 Screws Kit](https://www.amazon.com/dp/B0FGX859K8?ref_=ppx_hzod_title_dt_b_fed_asin_title_2_2) | Necessary hardware for the assembly to be possible. | |  $21.99  |
+| 1 | [Flanged Ball Bearing](https://www.amazon.com/dp/B0G1B7H48R?ref_=ppx_hzod_title_dt_b_fed_asin_title_2_3) | Necessary hardware for the rocker-bogie to be possible. | |  $8.69  |
+| 1 | [Jumper Cables](https://www.amazon.com/dp/B07GD2PGY4?ref_=ppx_hzod_title_dt_b_fed_asin_title_2_4) | Allow for power-injection to the daisy-chained servos. | |  $8.99  |
+| 2 | [20A/300W Buck Converter](https://www.amazon.com/dp/B099S2VQ2Q?ref_=ppx_hzod_title_dt_b_fed_asin_title_0_0) | Allow for the 12V battery to transfer power downstream. | |  $18.99  |
+| 1 | [PTFE/Plumber's Tape](https://www.amazon.com/dp/B091913Z7F?ref_=ppx_hzod_title_dt_b_fed_asin_title_1_0) | Facilitate the physical "bushing" inside the wheels. | |  $3.99  |
+| 1 | [12V, 15Ah LiFePO4](https://www.amazon.com/dp/B0CSWMF35Q?ref_=ppx_hzod_title_dt_b_fed_asin_title_1_1) | Powers the rover (hopefully for 2+ hours). | |  $74.99  |
+| 1 | [Female Spade Connectors](https://a.co/d/03C3n3lU) | Allow for solderless power supply. | |  $6.99  |
 | 1 | [Digital Multimeter](https://www.amazon.com/dp/B08CX9W7G3?ref_=ppx_hzod_title_dt_b_fed_asin_title_0_0) | Checking if the electronic components are viable. | |  $38.43  |
-| 1 | [Ring Lugs Set](https://www.amazon.com/dp/B0F99P7SGT?ref_=ppx_hzod_title_dt_b_fed_asin_title_1_0) | Allow for wires to be crimped onto the ANL fuse. | |  |
-| 1 | [12V LiFePO4 Charger](https://www.amazon.com/dp/B0G3ZNWC4J?ref_=ppx_hzod_title_dt_b_fed_asin_title_1_1) | Charges the battery. | |  |
+| 1 | [Ring Lugs Set](https://www.amazon.com/dp/B0F99P7SGT?ref_=ppx_hzod_title_dt_b_fed_asin_title_1_0) | Allow for wires to be crimped onto the ANL fuse. | |  $13.99  |
+| 1 | [12V LiFePO4 Charger](https://www.amazon.com/dp/B0G3ZNWC4J?ref_=ppx_hzod_title_dt_b_fed_asin_title_1_1) | Charges the battery. | |  $12.19  |
 | 1 | [M4x10mm Screws](https://www.amazon.com/dp/B0FH2T8PD1?ref_=ppx_hzod_title_dt_b_fed_asin_title_0_0) | Necessary hardware for the assembly to be possible. | |  $4.30  |
 | 1 | [ASA Filament,<br>2kgs (1.2ish needed)](https://www.amazon.com/dp/B0G2L8HKB8?ref_=ppx_hzod_title_dt_b_fed_asin_title_0_0) | Filament for prints. | |  $37.87  |
 | 1 | [TPU 95A Filament,<br>1kg (0.8ish needed)](https://www.amazon.com/dp/B07VDP2S3P?ref_=ppx_hzod_title_dt_b_fed_asin_title_0_0) | Filament for prints. | |  $25.97  |

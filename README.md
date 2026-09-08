@@ -32,7 +32,7 @@ Eventually, when I build this, I should be able to attach a few "normal" photos 
 Find the BOM above in the attached files.
 Or, alternatively, here it is below:
 
-| Quantity | Item | Description | Source | Total Cost |
+| Quantity | Item | Description | Source | Cost |
 | :--- | :---: | :---: | :---: | ---: |
 | 24 | [JST 3-Pin to Male](https://www.adafruit.com/product/3893) | Allows for power-injection to the Feetech servos. | Adafruit |  $30.00  |
 | 3 | [US-100 Ultrasonic Sensor](https://www.adafruit.com/product/4019) | Allows the rover to navigate terrain/avoid objects. | |  $20.85  |
@@ -40,13 +40,13 @@ Or, alternatively, here it is below:
 | 1 | [Raspberry Pi AI Camera](https://www.adafruit.com/product/6009) | Allows the rover to have object detection/recognition capabilities. | |  $77.00  |
 | 1 | [Raspberry Pi 5, 8GB](https://aaawave.com/products/raspberry-pi-5-development-broad?variant=51441087152449) | The "brains" of the rover. | AAAWave |  $161.63  |
 | 1 | [Bus Servo Adapter](https://www.ebay.com/itm/206185697206?mkevt=1&mkpid=0&emsid=e11412.m144671.l197929&mkcid=7&ch=osgood&euid=6d034ae6c7bd442a96e4e9cbff91307c&bu=45719063109&exe=0&ext=0&osub=-1%7E1&crd=20260803165232&segname=11412) | Allows for the Pi to communicate with the serial bus servos. | eBay |  $12.23  |
-| 6 | [Feetech STS3215](https://www.aliexpress.us/item/3256808670629323.html?spm=a2g0o.order_list.order_list_main.41.4d5c18021PISjv&gatewayAdapt=glo2usa) | Allows for the rover to move (both its wheels and the camera). | Aliexpress |  $404.07  |
-| 1 | [Soldering Iron, HS02A](https://www.aliexpress.us/item/3256809503553320.html?spm=a2g0o.order_list.order_list_main.47.4d5c18021PISjv&gatewayAdapt=glo2usa) | Necessary to attach the heat-set inserts, tool. | |  |
-| 1 | [Hot Air Gun](https://www.aliexpress.us/item/3256810350606440.html?spm=a2g0o.order_list.order_list_main.53.4d5c18021PISjv&gatewayAdapt=glo2usa) | Necessary to secure the shrink tubing to properly insulate wires. | |  |
-| 1 | [Heat Shrink Tubing](https://www.aliexpress.us/item/3256807959988149.html?spm=a2g0o.order_list.order_list_main.35.4d5c18021PISjv&gatewayAdapt=glo2usa) | Necessary to electrically insulate certain wires. | |  |
-| 1 | [WAGO 221-415](https://www.aliexpress.us/item/3256811952946871.html?spm=a2g0o.order_list.order_list_main.29.4d5c18021PISjv&gatewayAdapt=glo2usa) | Necessary to proper distribute power as desired. | |  |
-| 1 | [USB-C/Screw Terminal](https://www.aliexpress.us/item/3256812221028465.html?spm=a2g0o.order_list.order_list_main.11.4d5c18021PISjv&gatewayAdapt=glo2usa) | Necessary to provide the RPi power through bare wires. | |  |
-| 2 | [1M, 12AWG Wire](https://www.aliexpress.us/item/3256808222999562.html?spm=a2g0o.order_list.order_list_main.5.4d5c18021PISjv&gatewayAdapt=glo2usa) | Facilitates an electrical connection across parts. | |  |
+| 6 | [Feetech STS3215](https://www.aliexpress.us/item/3256808670629323.html?spm=a2g0o.order_list.order_list_main.41.4d5c18021PISjv&gatewayAdapt=glo2usa) | Allows for the rover to move (both its wheels and the camera). | Aliexpress |  $268.65  |
+| 1 | [Soldering Iron, HS02A](https://www.aliexpress.us/item/3256809503553320.html?spm=a2g0o.order_list.order_list_main.47.4d5c18021PISjv&gatewayAdapt=glo2usa) | Necessary to attach the heat-set inserts, tool. | |  $50.57  |
+| 1 | [Hot Air Gun](https://www.aliexpress.us/item/3256810350606440.html?spm=a2g0o.order_list.order_list_main.53.4d5c18021PISjv&gatewayAdapt=glo2usa) | Necessary to secure the shrink tubing to properly insulate wires. | |  $7.65  |
+| 1 | [Heat Shrink Tubing](https://www.aliexpress.us/item/3256807959988149.html?spm=a2g0o.order_list.order_list_main.35.4d5c18021PISjv&gatewayAdapt=glo2usa) | Necessary to electrically insulate certain wires. | |  $6.97. |
+| 1 | [WAGO 221-415](https://www.aliexpress.us/item/3256811952946871.html?spm=a2g0o.order_list.order_list_main.29.4d5c18021PISjv&gatewayAdapt=glo2usa) | Necessary to proper distribute power as desired. | |  $8.60. |
+| 1 | [USB-C/Screw Terminal](https://www.aliexpress.us/item/3256812221028465.html?spm=a2g0o.order_list.order_list_main.11.4d5c18021PISjv&gatewayAdapt=glo2usa) | Necessary to provide the RPi power through bare wires. | |  $1.77  |
+| 2 | [1M, 12AWG Wire](https://www.aliexpress.us/item/3256808222999562.html?spm=a2g0o.order_list.order_list_main.5.4d5c18021PISjv&gatewayAdapt=glo2usa) | Facilitates an electrical connection across parts. | |  $10.86  |
 | 1 | [RPi 5, Active Cooler](https://www.amazon.com/dp/B0CW164TCW?ref_=ppx_hzod_title_dt_b_fed_asin_title_0_0) | Allows for smooth Pi operation, prevents overheating. | Amazon |  $162.99  |
 | 1 | [12V/30A Daiertek Switch](https://www.amazon.com/dp/B0FL6B75PM?ref_=ppx_hzod_title_dt_b_fed_asin_title_1_0) | A manual power switch for the rover. | |  |
 | 1 | [20A ANL Fuse](https://www.amazon.com/dp/B01LXQWZ7L?ref_=ppx_hzod_title_dt_b_fed_asin_title_1_1) | Protects electronics downstream. | |  |
@@ -67,7 +67,7 @@ Or, alternatively, here it is below:
 | 1 | [ASA Filament,<br>2kgs (1.2ish needed)](https://www.amazon.com/dp/B0G2L8HKB8?ref_=ppx_hzod_title_dt_b_fed_asin_title_0_0) | Filament for prints. | |  $37.87  |
 | 1 | [TPU 95A Filament,<br>1kg (0.8ish needed)](https://www.amazon.com/dp/B07VDP2S3P?ref_=ppx_hzod_title_dt_b_fed_asin_title_0_0) | Filament for prints. | |  $25.97  |
 | 1 | [Crimpling "Plier"](https://www.amazon.com/dp/B073YG65N2?ref=ppx_yo2ov_dt_b_fed_asin_title) | Necessary to properly attach the solderless lugs/terminals. | | $8.99 |
-| Total: |  |  |  |  $1,121.90  |
+| Total: |  |  (with taxes and shipping)  |  |  $1,121.90  |
 
 Recommended additional common supplies (double-check you have these):
 1. An official raspberry pi 5 power supply (27W).
